@@ -4,7 +4,7 @@ export default function Navigation(){
     return(
         <>
         {/*Navigation Bar*/}
-            <nav className="nav">
+            <nav className="navContainer">
                 <ul>
                     <li><a href ="#">HOME</a></li>
                     <li><a href ="#">JOURNAL</a></li>

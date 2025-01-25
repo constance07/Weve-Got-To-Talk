@@ -23,9 +23,13 @@ export default function Hero(){
         {/*Description*/}
         <div className='heroDisc'>
                 <div className={be_Vietnam_Pro_VLight.className}>
-                    A 21-day online journal<br/>designed to be deleted
+                   The digital journal <br/>designed to be deleted
                 </div>
-            </div>    
+            </div>
+        {/*Start Button*/}
+        <div className= "startButton">
+            <button className={be_Vietnam_Pro_Light.className}>Let's get started...</button> 
+        </div>    
         </div>
             
     );
