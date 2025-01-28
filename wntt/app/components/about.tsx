@@ -12,15 +12,23 @@ export default function About(){
             {/*About Title*/}
             <div className='aboutTitle'>
                 <div className = {be_Vietnam_Pro.className}>
-                    <h1>LET'S BE HONEST</h1>
+                    <h1>BE HONEST</h1>
                 </div>
             </div>
             {/*About Sub-Title*/}
             <div className='aboutSubTitle'>
                 <div className= {be_Vietnam_Pro_Light.className}>
-                    You probably don't know who you are.
+                    How much do you really know yourself?
                 </div>
-
+            </div>
+            {/*About Description*/}
+            <div className='aboutDisc'>
+                <div className= {be_Vietnam_Pro_Light.className}>
+                Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer nec ipsum sit amet dolor aliquam condimentum at in lectus. 
+                Mauris fringilla urna mi, eget pulvinar ex tincidunt sit amet. Suspendisse mattis consectetur turpis, eget egestas turpis mattis vel. 
+                Vestibulum sagittis turpis sed sem consectetur, sed gravida quam fringilla. Mauris libero risus, commodo fermentum dapibus id, dignissim ut erat. 
+                Nunc vitae justo orci. Donec pretium turpis ante, id sagittis arcu imperdiet eget. Morbi lacinia tellus eu justo mattis, eu rutrum odio vehicula.
+                </div>
             </div>
         </div>
     )
