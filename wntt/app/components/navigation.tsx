@@ -1,4 +1,5 @@
 import '../globals.css';
+import NextLink from 'next/link';
 
 export default function Navigation(){
     return(
@@ -6,10 +7,10 @@ export default function Navigation(){
         {/*Navigation Bar*/}
             <nav className="navContainer">
                 <ul>
-                    <li><a href ="#">HOME</a></li>
-                    <li><a href ="#">JOURNAL</a></li>
-                    <li><a href ="#">PURPOSE</a></li>
-                    <li><a href ="#">CONTACT</a></li>
+                    <li><NextLink href ="..">HOME</NextLink></li>
+                    <li><NextLink href =''>JOURNAL</NextLink></li>
+                    <li><NextLink href ="..">PURPOSE</NextLink></li>
+                    <li><NextLink href ="..">CONTACT</NextLink></li>
                 </ul>
             </nav>
         </>
