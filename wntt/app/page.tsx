@@ -11,6 +11,7 @@ import { Be_Vietnam_Pro} from 'next/font/google';
 
 
 export default function Home() {
+
   return (
     <div className = {be_Vietnam_Pro.className}>
       <Navigation/>

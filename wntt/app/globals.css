@@ -1,4 +1,5 @@
 /* Base Website Layout */
+/* res <= xxs */
 *{
   margin: 0;
   padding: 0;
@@ -15,13 +16,13 @@ body{
 
 
 /*Responsive Design --> Media Queries*/
-  /*Xs*/
+  /*xs*/
   @media (min-width: 475px){
     /*HERO SECTION*/
       /*Navigation Bar*/
       .navContainer{
       width:35%;
-      height: 100vh;
+      height: 65%;
       background-color: #161616;
       padding-top: 0;
       margin: 0;
@@ -29,27 +30,49 @@ body{
       z-index: 999;
       display: flex;
       flex-direction: column;
-      display: none;
     }
     .navContainer ul{
       display: flex;
       flex-direction: column;
       list-style: none;
       justify-content: flex-end;
+
+      display: none;
     }.navContainer li{
       height: 25%;
       padding: 25%;
       display: flex;
       justify-content: center;
       font-size: 1.3em;
+      display: none;
     }.navContainer a{
       text-decoration: none;
       display: flex;
       align-items: center;
       color:#FBEED7;
+      display: none;
     }.navContainer a:hover{
       color: #c5baa8;
       }
+        /*Mobile Nav(On-Click)*/
+        #exitButton{
+          color:#dc0000;
+          display: none;
+        }
+        #hamburgerIcon{
+          color: #FBEED7;
+          background-color: #161616;
+          width: 25%;
+          margin-left: 45%;
+          padding-bottom: 35%;
+          border: none;
+          padding-top: 21.5%;
+          padding-bottom: 25%;
+        }
+        #hamburgerIcon:hover{
+          color: #c5baa8;
+          cursor: pointer;
+        }
     /*Hero Title*/
     .heroContainer{
       background-color: #161616;
@@ -58,6 +81,7 @@ body{
       padding: 10%;
       margin: auto;
       height: 65%;
+      padding-top: 30%;
     }.heroTitleThin{
       font-size: 2.0em;
     }.heroDisc{
@@ -111,20 +135,271 @@ body{
     font-size: 1.2em;
     padding-top: 5%;
   }
-
-
-
-
-
+  }
 
 
   /*Sm*/
   @media (min-width: 640px){
+      /*HERO SECTION*/
+        /*Navigation Bar*/
+        .navContainer{
+        width:35%;
+        height: 65%;
+        background-color: #161616;
+        padding-top: 0;
+        margin: 0;
+        float: right;
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+      }
+      .navContainer ul{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        justify-content: flex-end;
+  
+        display: none;
+      }.navContainer li{
+        height: 25%;
+        padding: 25%;
+        display: flex;
+        justify-content: center;
+        font-size: 1.3em;
+        display: none;
+      }.navContainer a{
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color:#FBEED7;
+        display: none;
+      }.navContainer a:hover{
+        color: #c5baa8;
+        }
+          /*Mobile Nav(On-Click)*/
+          #exitButton{
+            color:#dc0000;
+            display: none;
+          }
+          #hamburgerIcon{
+            color: #FBEED7;
+            background-color: #161616;
+            width: 25%;
+            margin-left: 45%;
+            padding-bottom: 35%;
+            border: none;
+            padding-top: 21.5%;
+            padding-bottom: 25%;
+          }
+          #hamburgerIcon:hover{
+            color: #c5baa8;
+            cursor: pointer;
+          }
+      /*Hero Title*/
+      .heroContainer{
+        background-color: #161616;
+        color: #FBEED7;
+        font-size: 2.0em;
+        padding: 10%;
+        margin: auto;
+        height: 65%;
+        padding-top: 30%;
+      }.heroTitleThin{
+        font-size: 2.0em;
+      }.heroDisc{
+        font-size: 0.6em;
+        margin: 5px;
+        margin-top: 6%;
+        letter-spacing: 5px;
+      }
+      /*Start Button*/
+      .startButton button{
+        color: #161616;
+        font-size: 0.5em;
+        border-radius: 35px;
+        width: 300px;
+        height: 45px;
+        margin-top: 6%;
+        margin-bottom: 4%;
+      }
+      /*ABOUT SECTION*/  
+      .aboutContainer{
+        height: 80%;
+        background-color: #292727;
+        padding-top: 20%;
+        padding-bottom: 20%;
+      }.aboutTitle{
+        font-size: 1.2em;
+        text-align: center;
+        background-color: #292727;
+        color:#FBEED7;
+      }.aboutSubTitle{
+        text-align: center;
+        margin: 4%;
+        font-size: 1.0em;
+        color: #F4F4F4;
+      }.aboutDisc{
+        color: #F4F4F4;
+        margin-right: 6%;
+        margin-left: 6%;
+        font-size: 1.0em;
+        text-align: center;
+      }
+    /*FOOTER SECTION*/
+    .footerContainer{
+      padding: 10%;
+      text-align: center;
+    }.footerTitle{
+      font-size: 1.6em;
+    }.footerSubTitle{
+      font-size: 1.2em;
+    }.footerEmail{
+      font-size: 1.2em;
+      padding-top: 5%;
+    }
   }
   
+
+
+
+
+
+
+
+
+
+
+
+
   /*Md*/
   @media (min-width: 768px){
-    /*HERO SECTION*/
+      /*HERO SECTION*/
+        /*Navigation Bar*/
+        .navContainer{
+          width:35%;
+          height: 65%;
+          background-color: #161616;
+          padding-top: 0;
+          margin: 0;
+          float: right;
+          z-index: 999;
+          display: flex;
+          flex-direction: column;
+        }
+        .navContainer ul{
+          display: flex;
+          flex-direction: column;
+          list-style: none;
+          justify-content: flex-end;
+    
+          display: none;
+        }.navContainer li{
+          height: 25%;
+          padding: 25%;
+          display: flex;
+          justify-content: center;
+          font-size: 1.3em;
+          display: none;
+        }.navContainer a{
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          color:#FBEED7;
+          display: none;
+        }.navContainer a:hover{
+          color: #c5baa8;
+          }
+            /*Mobile Nav(On-Click)*/
+            #exitButton{
+              color:#dc0000;
+              display: none;
+            }
+            #hamburgerIcon{
+              color: #FBEED7;
+              background-color: #161616;
+              width: 25%;
+              margin-left: 50%;
+              padding-bottom: 35%;
+              border: none;
+              padding-top: 21.5%;
+              padding-bottom: 25%;
+            }
+            #hamburgerIcon:hover{
+              color: #c5baa8;
+              cursor: pointer;
+            }
+        /*Hero Title*/
+        .heroContainer{
+          background-color: #161616;
+          color: #FBEED7;
+          font-size: 3.0em;
+          padding: 10%;
+          margin: auto;
+          height: 65%;
+          padding-top: 30%;
+        }.heroTitleThin{
+          font-size: 2.0em;
+        }.heroDisc{
+          font-size: 0.6em;
+          margin: 5px;
+          margin-top: 6%;
+          letter-spacing: 5px;
+        }
+        /*Start Button*/
+        .startButton button{
+          color: #161616;
+          font-size: 0.5em;
+          border-radius: 35px;
+          width: 300px;
+          height: 45px;
+          margin-top: 6%;
+          margin-bottom: 4%;
+        }
+        /*ABOUT SECTION*/  
+        .aboutContainer{
+          height: 80%;
+          background-color: #292727;
+          padding-top: 20%;
+          padding-bottom: 20%;
+        }.aboutTitle{
+          font-size: 1.2em;
+          text-align: center;
+          background-color: #292727;
+          color:#FBEED7;
+        }.aboutSubTitle{
+          text-align: center;
+          margin: 4%;
+          font-size: 1.0em;
+          color: #F4F4F4;
+        }.aboutDisc{
+          color: #F4F4F4;
+          margin-right: 6%;
+          margin-left: 6%;
+          font-size: 1.0em;
+          text-align: center;
+        }
+      /*FOOTER SECTION*/
+      .footerContainer{
+        padding: 10%;
+        text-align: center;
+      }.footerTitle{
+        font-size: 1.6em;
+      }.footerSubTitle{
+        font-size: 1.2em;
+      }.footerEmail{
+        font-size: 1.2em;
+        padding-top: 5%;
+      }
+  }
+
+
+
+
+
+
+  /*Lg*/
+  @media (min-width: 1024px){
+      /*HERO SECTION*/
       .navContainer{
         width:100%;
         height: 20vh;
@@ -158,13 +433,21 @@ body{
       }.navContainer a:hover{
         color: #c5baa8;
       }
+      /*Mobile Navigation*/
+      #exitButton{
+        display: none;
+      }
+      #hamburgerIcon{
+        display: none;
+      }
         /*Hero Title*/
     .heroContainer{
       background-color: #161616;
       padding-bottom: 6%;
+      padding-top: 0px;
     }.heroTitle{
       color: #FBEED7;
-      font-size: 1.5em;
+      font-size: 1.0em;
       margin: -1%;
     }.heroTitle{
       padding-top: 5%;
@@ -227,12 +510,8 @@ body{
     padding-top: 2%;
   }
   }
-  /*Lg*/
-  @media (min-width: 1024px){
-/* Start Button */
-  }
   /*Xl*/
   @media (min-width: 1280px){
 
   }
-  }
+  
