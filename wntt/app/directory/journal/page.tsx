@@ -14,6 +14,7 @@ export default function Journal() {
   return (
     <div className = {be_Vietnam_Pro.className}>
         <Navigation/>
+        {/*Fix CSS sizing for Nav*/}
         <Library/>
         <Footer/>
     </div>
