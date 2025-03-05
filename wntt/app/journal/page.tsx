@@ -1,5 +1,5 @@
 import Image from "next/image";
-import '../journal/local.css';
+import './local.css';
 {/* Figure out how to import global css*/}
 {/*Imported Components*/}
 import Navigation from "@/app/components/navigation";

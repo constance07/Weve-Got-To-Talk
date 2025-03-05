@@ -9,6 +9,7 @@ export default function Navigation(){
 
 {/*State Management for Event: On-Click*/}
     const [isActive, setIsActive] = useState(false);
+    
     const showNavBar = () => {
         setIsActive(!isActive);
     };
@@ -30,7 +31,7 @@ const element = <FontAwesomeIcon icon ={faBars}/>
                 {/*Expanded(ON-CLICK)*/}
                 <ul className = "navList" >
                     <li><Link href ="/">HOME</Link></li>
-                    <li><Link href ='/directory/journal'>JOURNAL</Link></li>
+                    <li><Link href ='/journal'>JOURNAL</Link></li>
                     <li><Link href ="..">PURPOSE</Link></li>
                     <li><Link href ="..">CONTACT</Link></li>
                     <button id = "exitButton">
