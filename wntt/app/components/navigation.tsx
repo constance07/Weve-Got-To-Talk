@@ -6,37 +6,27 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 
 export default function Navigation(){
-
-{/*State Management for Event: On-Click*/}
-    const [isActive, setIsActive] = useState(false);
-    
-    const showNavBar = () => {
-        setIsActive(!isActive);
-    };
-    const closeNavBar = () => {
-        setIsActive(false)
-    }
-
-{/*Hamburger Icon*/} 
-const element = <FontAwesomeIcon icon ={faBars}/>
+    {/*State for Hamburger*/}
+    const [menuOpen, setMenuOpen] = useState(false);
 
     return(
         <>
         {/*Navigation Bar*/}
             <nav /* ref = {navRef} */ className="navContainer">
                 {/*Collapsed*/}
-                    <button id = "hamburgerIcon" >
-                        <FontAwesomeIcon icon ={faBars}/> 
-                    </button>
+                    <div className = "hamburgerIcon" onClick={() => {
+                        setMenuOpen(!menuOpen);
+                    }}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 {/*Expanded(ON-CLICK)*/}
-                <ul className = "navList" >
+                <ul className = {menuOpen ? "open" : ""}>
                     <li><Link href ="/">HOME</Link></li>
                     <li><Link href ='/journal'>JOURNAL</Link></li>
                     <li><Link href ="..">PURPOSE</Link></li>
                     <li><Link href ="..">CONTACT</Link></li>
-                    <button id = "exitButton">
-                        EXIT
-                    </button>
                 </ul>      
             </nav>
         </>

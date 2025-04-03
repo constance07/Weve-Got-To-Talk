@@ -6,7 +6,7 @@ import { Be_Vietnam_Pro} from 'next/font/google';
 {/*Light*/}const be_Vietnam_Pro_Light = Be_Vietnam_Pro({subsets: ['latin'], weight: '300'})
 {/*VLight*/}const be_Vietnam_Pro_VLight = Be_Vietnam_Pro({subsets: ['latin'], weight: '200'})
 
-export default function Hero(){
+export default function Card(){
     return(
         <div className='heroContainer'>
         {/*Hero Title*/}
@@ -23,7 +23,7 @@ export default function Hero(){
         {/*Description*/}
         <div className='heroDisc'>
                 <div className={be_Vietnam_Pro_VLight.className}>
-                   The digital card game <br/>designed to be forgotten
+                   The digital journal <br/>designed to be deleted
                 </div>
             </div>
         {/*Start Button*/}

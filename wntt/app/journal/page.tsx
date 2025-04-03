@@ -1,9 +1,11 @@
 import Image from "next/image";
-import './local.css';
 {/* Figure out how to import global css*/}
 {/*Imported Components*/}
 import Navigation from "@/app/components/navigation";
 import Footer from "@/app/components/footer";
+import Card from "./card";
+import Hero from "../components/hero";
+import About from "../components/about";
 import Library from "@/app/components/library";
 {/* Fonts */}
 import { Be_Vietnam_Pro} from 'next/font/google';
@@ -13,10 +15,9 @@ import { Be_Vietnam_Pro} from 'next/font/google';
 export default function Journal() {
   return (
     <div className = {be_Vietnam_Pro.className}>
-        <Navigation/>
-        {/*Fix CSS sizing for Nav*/}
-        <Library/>
-        <Footer/>
+      <Navigation/>
+      <Card/>
+      <Footer/>
     </div>
   );
 }
