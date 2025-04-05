@@ -8,7 +8,6 @@ import { useState } from 'react';
 export default function Navigation(){
     {/*State for Hamburger*/}
     const [menuOpen, setMenuOpen] = useState(false);
-
     return(
         <>
         {/*Navigation Bar*/}
@@ -23,6 +22,7 @@ export default function Navigation(){
                     </div>
                 {/*Expanded(ON-CLICK)*/}
                 <ul className = {menuOpen ? "open" : ""}>
+                    <div className = "Overlay"></div>
                     <li><Link href ="/">HOME</Link></li>
                     <li><Link href ='/journal'>JOURNAL</Link></li>
                     <li><Link href ="..">PURPOSE</Link></li>
