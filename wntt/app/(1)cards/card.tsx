@@ -1,5 +1,6 @@
 'use client';
 import '../globals.css';
+import 'local.css';
 {/* Fonts */}
 import { Be_Vietnam_Pro} from 'next/font/google';
 {/*VBold*/}const be_Vietnam_Pro = Be_Vietnam_Pro({subsets: ['latin'], weight: '800'})
@@ -23,7 +24,7 @@ export default function Card(){
         {/*Description*/}
         <div className='heroDisc'>
                 <div className={be_Vietnam_Pro_VLight.className}>
-                   The digital journal <br/>designed to be deleted
+                   The digital card game <br/>designed to be forgotten
                 </div>
             </div>
         {/*Start Button*/}

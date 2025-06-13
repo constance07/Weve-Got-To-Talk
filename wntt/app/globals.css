@@ -8,93 +8,108 @@ body{
   background-color: #F4F4F4;
   margin-left: auto;
   height: 0%;
-  overflow-x: hidden;
   padding-left:0.5 rem;
   padding-right:0.5 rem;
+  z-index: 0;
+  overflow: auto;
 }
 
 /*Responsive Design --> Media Queries*/
   /*xs*/
   @media (min-width: 475px){
+    /*Scroll Bar*/
+      .overflowHidden{
+        overflow: hidden;
+        height: 100%;
+      }
+      .overflowShow{
+        overflow: auto;
+        height: 100vh;
+      }
     /*HERO SECTION*/
-      /*Navigation Bar*/
-      .navContainer{
-        /*On-Click: width 100% position: sticky*/
-      width:100%;
-      height: 100%;
-      background-color: #161616;
-      padding-top: 0;
-      margin-bottom: 0vh;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      z-index: 5;
-    }
-    .navContainer ul{
-      flex-direction: column;
-      list-style: none;
-      /*On-Click: fixed for sticky*/
-      /*do fixed for stick */
-      position: fixed;
-      width: 60%;
-      height: 100%;
-      background-color: #292727;
-      z-index: 3;
-      display: none;
-      
-    }
-    .navContainer li{
-      padding: 5%;
-      padding-left: 15%;
-      height: 4%;
-      display: flex;
-      font-size: 135%;
-      background-color: #292727;
-      z-index: 3;
-      
-    } .navContainer li:hover{
-      background-color: #3a3737;
-      color:#FBEED7;
-      cursor: pointer;
-      z-index: 3;
-    }
-    }.navContainer a{
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      color:#FBEED7;
-      z-index: 5;
-    }
-  .navContainer a.active-link{
-    color: #FBEED7;
-  }
-    ul.open{
-      display:flex;
-      z-index: 3;
-      position: fixed;
+        /*Navigation Bar*/
+        .navContainer{
+          /*On-Click: width 100% position: sticky*/
+        width:100%;
+        height: 100%;
+        padding-top: 0;
+        margin-bottom: 0vh;
+        display: flex;
+        overflow-y: hidden;
+        flex-direction: column;
+        align-items: flex-end;
+        z-index: 4;
+      }
+      .navContainer ul{
+        flex-direction: column;
+        list-style: none;
+        /*On-Click: fixed for sticky*/
+        /*do fixed for stick */
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: #292727;
+        z-index: 100;
+        transform: translateY(-100%);
+      }
+      .navContainer li{
+        padding: 5%;
+        padding-left: 15%;
+        height: 4%;
+        display: flex;
+        font-size: 155%;
+        background-color: #292727;
+        z-index: 5;
+        
+      } .navContainer li:hover{
+        background-color: #3a3737;
+        color:#FBEED7;
+        cursor: pointer;
+        z-index: 5;
+      }
+      }.navContainer a{
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color:#FBEED7;
+        z-index: 100;
+      }
+    .navContainer a.active-link{
+      color: #FBEED7;
     }
 
-    div.open{
-      display: flex;
-      z-index: 3;
-      position: fixed;
-    }
-    #Overlay.open{
-      display: flex;
-      z-index: 2;
-    }
-    #Overlay{
-      height: 100%;
-      width: 100%;
-      top: 0;
-      left: 0;
-      position: fixed;
-      display: none;
-      flex-direction: column;
-      z-index: 2;
-      align-items: end;
-      background-color: rgba(0,0,0,0.5);
-    }
+      ul.open{
+        display:flex;
+        z-index: 5;
+        /*FIX THIS WHAT THE HELL MAN*/
+        transition: transform 750ms ease-in-out;
+        transform: translateY(0%);
+      }
+      div.open{
+        display: flex;
+        z-index: 3;
+        position: static;
+      }
+      /*Overlay; Not in Visible Use */
+      #Overlay.open{
+        display: flex;
+        z-index: 2;
+        overflow: hidden;
+        overflow-y: hidden;
+      }
+      #Overlay{
+        height: 100%;
+        width: 100%;
+        overflow-y: hidden;
+        top: 0;
+        left: 0;
+        position: fixed;
+        display: none;
+        flex-direction: column;
+        z-index: 2;
+        align-items: end;
+        background-color: rgba(0,0,0,0.5);
+      }
         /*Mobile Nav(On-Click)*/
         .close-Button{
           display: flex;
@@ -103,10 +118,11 @@ body{
           align-items: end;
           padding-right: 12%;
           padding-bottom: 10%;
+          
         }
         .close-Button span:nth-child(1){
           height: 0.3rem;
-          width: 10%;
+          width: 9%;
           background-color: #FBEED7;
           border-radius: 0.5rem;
           transform: translateY(-13px) rotate(45deg);
@@ -114,7 +130,7 @@ body{
         }
         .close-Button span:nth-child(2){
           height: 0.3rem;
-          width: 10%;
+          width: 9%;
           background-color: #FBEED7;
           border-radius: 0.5rem;
           transform: translateY(-18px) rotate(-45deg);
@@ -123,12 +139,21 @@ body{
         /* .close-Button:hover{
           cursor: pointer;
         } */
+        .hamburgerIconBackground{
+          width: 100vw;
+          height: 75px;
+          background-color: #161616;
+          display: flex;
+          margin:0;
+          position: absolute;
+          justify-content: end;
+          padding-bottom: 10%;
+        }
         .hamburgerIcon{
           /*If you delete display, the bar won't show*/
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          position: absolute;
           width: 2.25rem;
           height: 30px;
           padding-top: 10%;
@@ -143,34 +168,33 @@ body{
         .hamburgerIcon:hover{
           cursor: pointer;
         }
-
-    /*Hero Title*/
-    .heroContainer{
-      background-color: #161616;
-      color: #FBEED7;
-      font-size: 2.0em;
-      padding: 10%;
-      margin: auto;
-      height: 65%;
-      padding-top: 30%;
-    }.heroTitleThin{
-      font-size: 2.0em;
-    }.heroDisc{
-      font-size: 0.6em;
-      margin: 5px;
-      margin-top: 6%;
-      letter-spacing: 5px;
-    }
-    /*Start Button*/
-    .startButton button{
-      color: #161616;
-      font-size: 0.5em;
-      border-radius: 35px;
-      width: 300px;
-      height: 45px;
-      margin-top: 6%;
-      margin-bottom: 4%;
-    }
+      .heroContainer{
+        background-color: #161616;
+        color: #FBEED7;
+        font-size: 2.0em;
+        padding: 10%;
+        margin: auto;
+        height: 65%;
+        padding-top: 30%;
+        
+      }.heroTitleThin{
+        font-size: 2.0em;
+      }.heroDisc{
+        font-size: 0.6em;
+        margin: 5px;
+        margin-top: 6%;
+        letter-spacing: 5px;
+      }
+      /*Start Button*/
+      .startButton button{
+        color: #161616;
+        font-size: 0.5em;
+        border-radius: 35px;
+        width: 300px;
+        height: 45px;
+        margin-top: 6%;
+        margin-bottom: 4%;
+      }
     /*ABOUT SECTION*/  
     .aboutContainer{
       height: 80%;
@@ -194,6 +218,14 @@ body{
       font-size: 1.0em;
       text-align: center;
     }
+  /*CAROUSEL SECTION */
+  .carouselContainer{
+        background-color: #292727;
+        color: #FBEED7;
+        font-size: 2.0em;
+        height: 60%;
+        padding-top: 220%;
+  }
   /*FOOTER SECTION*/
   .footerContainer{
     padding: 15%;
