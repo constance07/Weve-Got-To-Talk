@@ -13,7 +13,7 @@ export default function Footer(){
                 {/*Footer Title*/}
                 <div className='footerTitle'>
                     <div className={be_Vietnam_Pro.className}>
-                        CONTACT ME,
+                        SHARE YOURE THOUGHTS
                     </div>
                 </div>
                 {/*Footer Subtitle*/}

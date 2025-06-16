@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { useState, useEffect } from 'react';
 import { useScrollLock } from 'usehooks-ts'
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Navigation(){
     {/*State for Hamburger*/}
@@ -23,7 +24,9 @@ export default function Navigation(){
    }
 
     return(
+        
         <>
+        
         {/*Navigation Bar*/}
             <nav /* ref = {navRef} */ id = "navOpen" className="navContainer" >
                 {/*Collapsed*/}
@@ -39,10 +42,9 @@ export default function Navigation(){
               </div>
                 {/*Expanded(ON-CLICK)*/}
                 {/*Black Screen Overlay*/}
-                <div id = "Overlay" className = {menuOpen ? "open" : ""}>
-                    <ul id = "menu" className = {menuOpen ? "open" : ""}>
+                    <ul className = {menuOpen ? "open" : ""}>
                     {/*Exit Button*/}
-                        <div className = "close-Button">
+                        <div id = "close-Button">
                             <span id = "1x" onClick={() => {
                                 setMenuOpen(!menuOpen);
                                 enableScroll();
@@ -53,12 +55,11 @@ export default function Navigation(){
                                 }}></span>
                         </div>
                     {/*Pages*/}
-                        <li><a className = "active-link" href ="/">HOME</a></li>
-                        <li><a className = "active-link" href ='/(1)cards'>CARDS</a></li>
-                        <li><a className = "active-link" href ="/(2)purpose">PURPOSE</a></li>
-                        <li><a className = "active-link" href ="..">CONTACT</a></li>
-                    </ul>  
-                    </div>    
+                        <a className = "active-link" href ='/'><li>HOME</li></a>
+                        <a className = "active-link" href ='/(1)cards'><li>CARDS</li></a>
+                        <a className = "active-link" href ="/(2)purpose"><li>PURPOSE</li></a>
+                        <a className = "active-link" href =".."><li>CONTACT</li></a>
+                    </ul>    
             </nav>
         </>
     )
