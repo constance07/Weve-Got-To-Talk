@@ -26,9 +26,9 @@ export default function Navigation(){
     return(
         
         <>
-        
-        {/*Navigation Bar*/}
-            <nav /* ref = {navRef} */ id = "navOpen" className="navContainer" >
+    {/*ON MOBILE*/}    
+        {/*Hamburger Bar*/}
+            <nav /* ref = {navRef} */ id = "navOpen" className="hamburgerContainer" >
                 {/*Collapsed*/}
                 <div className='hamburgerIconBackground'>
                     <div className = "hamburgerIcon" onClick={() => {
@@ -61,6 +61,19 @@ export default function Navigation(){
                         <a className = "active-link" href =".."><li>CONTACT</li></a>
                     </ul>    
             </nav>
+
+
+    {/*ON DESKTOP*/}   
+        {/*Navigation Bar*/} 
+        <nav className ='navContainer'>
+            <ul>
+                {/*Pages*/}
+                <a className = "active-link" href ='/'><li>HOME</li></a>
+                <a className = "active-link" href ='/(1)cards'><li>CARDS</li></a>
+                <a className = "active-link" href ="/(2)purpose"><li>PURPOSE</li></a>
+                <a className = "active-link" href =".."><li>CONTACT</li></a>
+            </ul>
+        </nav>  
         </>
     )
 };

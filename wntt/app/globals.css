@@ -13,24 +13,26 @@ body{
   z-index: 0;
   overflow: auto;
 }
+/*Scroll Bar*/
+.overflowHidden{
+/*Disables*/
+  height: 100%;
+  overflow-y: hidden;
+  }
+  /*Enables*/
+  .overflowShow{
+  overflow: auto;
+  height: 100vh;
+      }
+
+
 
 /*Responsive Design --> Media Queries*/
   /*xs*/
   @media (min-width: 475px){
-    /*Scroll Bar*/
-      .overflowHidden{
-        /*Disables*/
-        height: 100%;
-        overflow-y: hidden;
-      }
-      /*Enables*/
-      .overflowShow{
-        overflow: auto;
-        height: 100vh;
-      }
     /*HERO SECTION*/
         /*Navigation Bar*/
-        .navContainer{
+        .hamburgerContainer{
           /*On-Click: width 100% position: sticky*/
         width:100%;
         height: 100%;
@@ -42,7 +44,7 @@ body{
         align-items: flex-end;
         z-index: 4;
       }
-        .navContainer ul{
+        .hamburgerContainer ul{
         flex-direction: column;
         list-style: none;
         /*On-Click: fixed for sticky*/
@@ -56,7 +58,7 @@ body{
         transform: translateY(-200vh);
         visibility: hidden;
       }
-      .navContainer li{
+      .hamburgerContainer li{
         padding-left: 15%;
         height: 20vh;
         display: flex;
@@ -66,7 +68,7 @@ body{
         height: 100%;
         align-items: center;
       } 
-      }.navContainer a{
+      }.hamburgerContainer a{
         text-decoration: none;
         padding: 5%;
         display: flex;
@@ -75,20 +77,20 @@ body{
         color:#FBEED7;
         z-index: 100;
       }
-      .navContainer a:hover{
+      .hamburgerContainer a:hover{
         background-color: #3a3737;
         color:#FBEED7;
         cursor: pointer;
         z-index: 3;
       }
-    .navContainer a.active-link{
-      color: #FBEED7;
-      transition: background-color 0.25s;
-    }
-    .navContainer a.active-link:active{
-      color: #cec2ae;
-      transition: color 0.25s;
-    }
+      .hamburgerContainer a.active-link{
+        color: #FBEED7;
+        transition: background-color 0.25s;
+      }
+      .hamburgerContainer a.active-link:active{
+        color: #cec2ae;
+        transition: color 0.25s;
+      }
       ul.open{
         z-index: 5;
         position: fixed;
@@ -96,7 +98,6 @@ body{
         visibility: visible;
         background-color: #292727;
         transform: translateY(0vh);
-        
         visibility:visible;
       }
       div.open{
@@ -104,87 +105,65 @@ body{
         z-index: 3;
         position: static;
       }
-      /* #overlay.open{
-        transform: translate3d(0vw, 0, 0);
-        transition: background-color 1s;
-      }
-      #overlay{
-        height: 100%;
-        width: 100%;
-        overflow-y: hidden;
-        top: 0;
-        background-color: rgba(0,0,0,0.5);
-        transition: background-color 1s;
-        left: 0;
-        position: fixed;
-        transform: translate3d(100vw, 0, 0);
+      /*Mobile Nav(On-Click)*/
+      #close-Button{
+        display: flex;
         flex-direction: column;
-        z-index: 2;
+        padding-top: 20%;
         align-items: end;
-      } */
-        /*Mobile Nav(On-Click)*/
-        #close-Button{
-          display: flex;
-          flex-direction: column;
-          padding-top: 20%;
-          align-items: end;
-          padding-right: 12%;
-          padding-bottom: 10%;
-          z-index: 0;
-          background-color: #292727;
-        }
-        #close-Button span:nth-child(1){
-          height: 0.3rem;
-          width: 8%;
-          z-index: 5;
-          background-color: #FBEED7;
-          border-radius: 0.5rem;
-          transform: translateY(-13px) rotate(45deg);
-          cursor: pointer;
-        }
-        #close-Button span:nth-child(2){
-          height: 0.3rem;
-          width: 8%;
-          z-index: 5;
-          background-color: #FBEED7;
-          border-radius: 0.5rem;
-          transform: translateY(-18px) rotate(-45deg);
-          cursor: pointer;
-        }
-        /* .close-Button:hover{
-          cursor: pointer;
-        } */
-        .hamburgerIconBackground{
-          width: 100vw;
-          height: 75px;
-          background-color: #161616;
-          display: flex;
-          margin:0;
-          position: absolute;
-          justify-content: end;
-          padding-bottom: 10%;
-        }
-        .hamburgerIcon{
-          /*If you delete display, the bar won't show*/
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          width: 2.25rem;
-          height: 30px;
-          padding-top: 10%;
-          margin-right: 12%;
-          z-index: 5;
-        }.hamburgerIcon span {
-          height: 0.3rem;
-          width: 105%;
-          background-color: #FBEED7;
-          border-radius: 0.5rem;
-          z-index: 5;
-        } 
-        .hamburgerIcon:hover{
-          cursor: pointer;
-          
-        }
+        padding-right: 12%;
+        padding-bottom: 10%;
+        z-index: 0;
+        background-color: #292727;
+      }
+      #close-Button span:nth-child(1){
+        height: 0.3rem;
+        width: 8%;
+        z-index: 5;
+        background-color: #FBEED7;
+        border-radius: 0.5rem;
+        transform: translateY(-13px) rotate(45deg);
+        cursor: pointer;
+      }
+      #close-Button span:nth-child(2){
+        height: 0.3rem;
+        width: 8%;
+        z-index: 5;
+        background-color: #FBEED7;
+        border-radius: 0.5rem;
+        transform: translateY(-18px) rotate(-45deg);
+        cursor: pointer;
+      }
+      .hamburgerIconBackground{
+        width: 100vw;
+        height: 75px;
+        background-color: #161616;
+        display: flex;
+        margin:0;
+        position: absolute;
+        justify-content: end;
+        padding-bottom: 10%;
+      }
+      .hamburgerIcon{
+        /*If you delete display, the bar won't show*/
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 2.25rem;
+        height: 30px;
+        padding-top: 10%;
+        margin-right: 12%;
+        z-index: 5;
+     }.hamburgerIcon span {
+        height: 0.3rem;
+        width: 105%;
+        background-color: #FBEED7;
+        border-radius: 0.5rem;
+        z-index: 5;
+      } 
+      .hamburgerIcon:hover{
+        cursor: pointer; 
+      }
       .heroContainer{
         background-color: #161616;
         color: #FBEED7;
@@ -192,8 +171,7 @@ body{
         padding: 10%;
         margin: auto;
         height: 65%;
-        padding-top: 30%;
-        
+        padding-top: 30%; 
       }.heroTitleThin{
         font-size: 2.0em;
       }.heroDisc{
@@ -205,12 +183,22 @@ body{
       /*Start Button*/
       .startButton button{
         color: #161616;
+        background-color: #F4F4F4;
         font-size: 0.5em;
+        border-color: #F4F4F4;
         border-radius: 35px;
+        border-style: none;
         width: 300px;
         height: 45px;
         margin-top: 6%;
+        outline: none;
         margin-bottom: 4%;
+        transition: 0.2s ease-in-out;
+      }
+      .startButton button:hover{
+        background-color: #c8c8c8;
+        transition: 0.2s ease-in-out;
+        cursor: pointer;
       }
     /*ABOUT SECTION*/  
     .aboutContainer{
@@ -235,7 +223,7 @@ body{
       font-size: 1.0em;
       text-align: center;
     }
-  /*CAROUSEL SECTION */
+    /*CAROUSEL SECTION */
   .carouselContainer{
         background-color: #292727;
         color: #FBEED7;
@@ -243,7 +231,7 @@ body{
         height: 60%;
         padding-top: 220%;
   }
-  /*FOOTER SECTION*/
+    /*FOOTER SECTION*/
   .footerContainer{
     padding: 15%;
     background-color: #F4F4F4;
@@ -261,107 +249,54 @@ body{
   }
   
 
+
   /*Sm*/
   @media (min-width: 640px){
-      /*HERO SECTION*/
-        /*Navigation Bar*/
-        .navContainer{
-        width:35%;
-        height: 65%;
-        background-color: #161616;
-        padding-top: 0;
-        margin: 0;
-        float: right;
-        display: flex;
-        flex-direction: column;
-      }
-      .navContainer ul{
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        justify-content: flex-end;
-      }.navContainer li{
-        height: 25%;
-        padding: 25%;
-        display: flex;
-        justify-content: center;
-        font-size: 1.3em;
-      }.navContainer a{
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        color:#FBEED7;
-      }.navContainer a:hover{
-        color: #c5baa8;
-        }
-          /*Mobile Nav(On-Click)*/
-          #exitButton{
-            color:#dc0000;
-            display: none;
-          }
-          #hamburgerIcon{
-            color: #FBEED7;
-
-          }
-          #hamburgerIcon:hover{
-            color: #c5baa8;
-            cursor: pointer;
-          }
-      /*Hero Title*/
+    /*HERO SECTION*/
+      /*Navigation Bar*/
+      .hamburgerContainer li{
+        font-size: 200%;    
+      } 
+      .hamburgerIcon{
+        height: 35px;
+      }.hamburgerIcon span {
+        height: 0.3rem;
+        width: 140%;
+      } 
       .heroContainer{
-        background-color: #161616;
-        color: #FBEED7;
-        font-size: 2.0em;
-        padding: 10%;
-        margin: auto;
-        height: 65%;
-        padding-top: 30%;
+        font-size: 2.5em;
       }.heroTitleThin{
         font-size: 2.0em;
       }.heroDisc{
-        font-size: 0.6em;
-        margin: 5px;
-        margin-top: 6%;
-        letter-spacing: 5px;
+        font-size: 0.55em;
       }
       /*Start Button*/
       .startButton button{
-        color: #161616;
-        font-size: 0.5em;
-        border-radius: 35px;
-        width: 300px;
-        height: 45px;
-        margin-top: 6%;
-        margin-bottom: 4%;
+        font-size: 0.43em;
       }
-      /*ABOUT SECTION*/  
-      .aboutContainer{
-        height: 80%;
+    /*ABOUT SECTION*/  
+      .aboutTitle{
+      font-size: 1.5em;
+    }.aboutSubTitle{
+      font-size: 1.2em;
+    }.aboutDisc{
+      font-size: 1.2em;
+    }
+    /*CAROUSEL SECTION */
+    .carouselContainer{
         background-color: #292727;
-        padding-top: 20%;
-        padding-bottom: 20%;
-      }.aboutTitle{
-        font-size: 1.2em;
-        text-align: center;
-        background-color: #292727;
-        color:#FBEED7;
-      }.aboutSubTitle{
-        text-align: center;
-        margin: 4%;
-        font-size: 1.0em;
-        color: #F4F4F4;
-      }.aboutDisc{
-        color: #F4F4F4;
-        margin-right: 6%;
-        margin-left: 6%;
-        font-size: 1.0em;
-        text-align: center;
-      }
+        color: #FBEED7;
+        font-size: 2.0em;
+        height: 60%;
+        padding-top: 220%;
+    }
     /*FOOTER SECTION*/
     .footerContainer{
-      padding: 20%;
-      background-color: #c32c2c;
+      padding: 15%;
       text-align: center;
+      height: 60%;
+      padding-top: 20%;
+      padding-bottom: 20%;
     }.footerTitle{
       font-size: 1.6em;
     }.footerSubTitle{
@@ -371,149 +306,151 @@ body{
       padding-top: 5%;
     }
   }
+
+
   
-
-
-
-
-
-
-
-
-
-
-
-
   /*Md*/
   @media (min-width: 768px){
-      /*HERO SECTION*/
+    /*HERO SECTION*/
         /*Navigation Bar*/
-        .navContainer{
-          width:35%;
-          height: 65%;
-          background-color: #161616;
-          padding-top: 0;
-          margin: 0;
-          display: flex;
-          flex-direction: column;
-        }
-        .navContainer ul{
-          display: flex;
-          flex-direction: column;
-          list-style: none;
-          justify-content: flex-end;
-        }.navContainer li{
-          height: 25%;
-          padding: 25%;
-          display: flex;
-          justify-content: center;
-          font-size: 1.3em;
-        }.navContainer a{
-          text-decoration: none;
-          display: flex;
-          align-items: center;
-          color:#FBEED7;
-        }.navContainer a:hover{
-          color: #c5baa8;
-          background-color: #292727;
-          padding: 12%;
-          border-radius: 0.5rem;
-        }
-        .navContainer:active{
-          background-color: #292727;
-        }
-            /*Mobile Nav(On-Click)*/
-            #exitButton{
-              color:#dc0000;
-              display: none;
-            }
-            #hamburgerIcon{
-              color: #FBEED7;
-              background-color: #161616;
-              width: 25%;
-              margin-left: 50%;
-              padding-bottom: 35%;
-              border: none;
-              padding-top: 21.5%;
-              padding-bottom: 25%;
-            }
-            #hamburgerIcon:hover{
-              color: #c5baa8;
-              cursor: pointer;
-            }
-        /*Hero Title*/
-        .heroContainer{
-          background-color: #161616;
-          color: #FBEED7;
-          font-size: 3.0em;
-          padding: 10%;
-          margin: auto;
-          height: 65%;
-          padding-top: 30%;
-        }.heroTitleThin{
-          font-size: 2.0em;
-        }.heroDisc{
-          font-size: 0.6em;
-          margin: 5px;
-          margin-top: 6%;
-          letter-spacing: 5px;
-        }
-        /*Start Button*/
-        .startButton button{
-          color: #161616;
-          font-size: 0.5em;
-          border-radius: 35px;
-          width: 300px;
-          height: 45px;
-          margin-top: 6%;
-          margin-bottom: 4%;
-        }
-        /*ABOUT SECTION*/  
-        .aboutContainer{
-          height: 80%;
-          background-color: #292727;
-          padding-top: 20%;
-          padding-bottom: 20%;
-        }.aboutTitle{
-          font-size: 1.2em;
-          text-align: center;
-          background-color: #292727;
-          color:#FBEED7;
-        }.aboutSubTitle{
-          text-align: center;
-          margin: 4%;
-          font-size: 1.0em;
-          color: #F4F4F4;
-        }.aboutDisc{
-          color: #F4F4F4;
-          margin-right: 6%;
-          margin-left: 6%;
-          font-size: 1.0em;
-          text-align: center;
-        }
-      /*FOOTER SECTION*/
-      .footerContainer{
-        padding: 10%;
-        text-align: center;
-      }.footerTitle{
-        font-size: 1.6em;
-      }.footerSubTitle{
-        font-size: 1.2em;
-      }.footerEmail{
-        font-size: 1.2em;
-        padding-top: 5%;
+      .hamburgerContainer{
+        display: none;      
       }
+      .navContainer{
+        width: 100%;
+        margin-top: 10%;
+        display: flex;
+        color: #FBEED7;
+        justify-content: center;
+        position: absolute;
+        flex-direction: row;
+        
+      }.navContainer ul{
+        align-items: center;
+        color: #FBEED7;
+        display: flex;
+        margin-top: 3%;
+
+      }
+      .navContainer li{
+        justify-content: center;
+        list-style: none;
+        align-items: center;
+        display: flex;
+        text-decoration: none;
+        width: 25vw;
+        height: 60px;
+        color: #FBEED7;
+        border-radius: 10%;
+        transition: background-color.55s ease-in-out;
+      }
+      .navContainer a{
+        text-decoration: none;
+        display: flex;
+        color: #FBEED7;
+        font-size: 1.4em;
+        flex-direction: row;
+      }
+      .navContainer li:hover{
+        text-decoration: none;
+        display: flex;
+        border-radius: 10%;
+        background-color: #3a3737;
+        transition: all .55s ease-in-out;
+        flex-direction: row;
+        color: #FBEED7;
+      }
+      .heroContainer{
+        background-color: #161616;
+        color: #FBEED7;
+        font-size: 3.0em;
+        padding: 10%;
+        margin: auto;
+        height: 65%;
+        padding-top: 30%; 
+      }.heroTitleThin{
+        font-size: 2.0em;
+      }.heroDisc{
+        font-size: 0.55em;
+        margin: 5px;
+        margin-top: 6%;
+        letter-spacing: 5px;
+      }
+      /*Start Button*/
+      .startButton button{
+        color: #161616;
+        background-color: #F4F4F4;
+        font-size: 0.425em;
+        border-color: #F4F4F4;
+        border-radius: 35px;
+        border-style: none;
+        width: 300px;
+        height: 45px;
+        margin-top: 6%;
+        outline: none;
+        margin-bottom: 4%;
+        transition: 0.2s ease-in-out;
+      }
+      .startButton button:hover{
+        background-color: #c8c8c8;
+        transition: 0.2s ease-in-out;
+        cursor: pointer;
+      }
+    /*ABOUT SECTION*/  
+    .aboutContainer{
+      height: 80%;
+      background-color: #292727;
+      padding-top: 20%;
+      padding-bottom: 20%;
+    }.aboutTitle{
+      font-size: 1.2em;
+      text-align: center;
+      background-color: #292727;
+      color:#FBEED7;
+    }.aboutSubTitle{
+      text-align: center;
+      margin: 4%;
+      font-size: 1.0em;
+      color: #F4F4F4;
+    }.aboutDisc{
+      color: #F4F4F4;
+      margin-right: 6%;
+      margin-left: 6%;
+      font-size: 1.0em;
+      text-align: center;
+    }
+    /*CAROUSEL SECTION */
+  .carouselContainer{
+        background-color: #292727;
+        color: #FBEED7;
+        font-size: 2.0em;
+        height: 60%;
+        padding-top: 220%;
   }
-
-
-
+    /*FOOTER SECTION*/
+  .footerContainer{
+    padding: 15%;
+    background-color: #c61818;
+    text-align: center;
+    height: 60%;
+    padding-top: 20%;
+    padding-bottom: 20%;
+  }.footerTitle{
+    font-size: 1.6em;
+  }.footerSubTitle{
+    font-size: 1.2em;
+  }.footerEmail{
+    font-size: 1.2em;
+    padding-top: 5%;
+  }
+}  
 
 
 
   /*Lg*/
   @media (min-width: 1024px){
       /*HERO SECTION*/
-      .navContainer{
+      .hamburgerContainer{
         width:100%;
         height: 20vh;
         background-color: #161616;
@@ -523,10 +460,10 @@ body{
         justify-content:right;
         box-shadow: none;
         
-      }.navContainer::before{
+      }.hamburgerContainer::before{
         background-color: #c04b4b;
       }
-      .navContainer ul{
+      .hamburgerContainer ul{
         height: 100%;
         display: flex;
         justify-content: right;
@@ -536,19 +473,19 @@ body{
         display: flex;
         flex-direction: row;
         background-color: #161616;
-      }.navContainer li{
+      }.hamburgerContainer li{
         height: 25%;
         padding: 4%;
         display: flex;
         font-size: 1.1em;
       }
-      .navContainer a{
+      .hamburgerContainer a{
         text-decoration: none;
         font-size: 1.4em;
         display: flex;
         align-items: center;
         color:#FBEED7;
-      }.navContainer a:hover{
+      }.hamburgerContainer a:hover{
         color: #c5baa8;
         background-color: #292727;
         padding: 12%;
@@ -619,6 +556,7 @@ body{
   }
   /*FOOTER SECTION*/
   .footerContainer{
+    background-color: #1721d8;
     padding: 2%;
     text-align: center;
   }.footerTitle{
