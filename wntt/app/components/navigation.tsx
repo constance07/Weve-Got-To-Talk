@@ -1,5 +1,5 @@
-//General Imports
 'use client';
+{/*General Imports */}
 import '../globals.css';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
@@ -58,6 +58,7 @@ export default function Navigation(){
                         <a className = "active-link" href ='/'><li>HOME</li></a>
                         <a className = "active-link" href ='/(1)cards'><li>CARDS</li></a>
                         <a className = "active-link" href ="/(2)purpose"><li>PURPOSE</li></a>
+                        <a className = "active-link" href ="/(3)about"><li>ABOUT</li></a>
                         <a className = "active-link" href =".."><li>CONTACT</li></a>
                     </ul>    
             </nav>
@@ -71,6 +72,7 @@ export default function Navigation(){
                 <a className = "active-link" href ='/'><li>HOME</li></a>
                 <a className = "active-link" href ='/(1)cards'><li>CARDS</li></a>
                 <a className = "active-link" href ="/(2)purpose"><li>PURPOSE</li></a>
+                <a className = "active-link" href ="/(3)about"><li>ABOUT</li></a>
                 <a className = "active-link" href =".."><li>CONTACT</li></a>
             </ul>
         </nav>  

@@ -7,7 +7,7 @@ import Carousel from "../components/carousel";
 import Hero from "../components/hero";
 import About from "../components/about";
 import Library from "@/app/components/library";
-import Disc from "@/app/(3)about/disc";
+import Disc from "./disc";
 
 {/* Fonts */}
 import { Be_Vietnam_Pro} from 'next/font/google';
@@ -18,6 +18,7 @@ export default function Journal() {
   return (
     <div className = {be_Vietnam_Pro.className}>
       <Navigation/>
+      <Disc/>
       <Footer/>
     </div>
   );

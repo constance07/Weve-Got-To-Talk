@@ -5,7 +5,7 @@
   padding: 0;
 }
 body{
-  background-color: #F4F4F4;
+  background-color: #292727;
   margin-left: auto;
   height: 0%;
   padding-left:0.5 rem;
@@ -231,14 +231,58 @@ body{
         height: 60%;
         padding-top: 220%;
   }
+    /*PURPOSE SECTION */
+  .discContainer{
+    height: 120vh;
+    position: absolute;
+    width: 100%;
+    margin-top: 20%;
+    display: flex;
+    justify-content: center;
+  } .nameContainer{
+    font-size: 1.8em;
+    padding: 50px;
+    color:#FBEED7;
+    position: absolute;
+  } .imageContainer{
+    width: 300px;
+    height: 390px;
+    border-radius: 20px;
+    position: absolute;
+    margin: 250px;
+  }.personalContainer{
+    width: 70%;
+    height: 100%;
+    margin-top: 700px;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: center;
+  }#introWord{
+    padding-bottom: 25px;
+    color: #FBEED7;
+  }#allWords{
+    background-color: #161616;
+    border-radius: 12px;
+    width: 100%;
+    font-size: 1.1rem;
+    height: 46.5rem;
+    padding-top: 250px;
+    padding: 35px;
+    color: #F4F4F4;
+  }
     /*FOOTER SECTION*/
   .footerContainer{
-    padding: 15%;
     background-color: #F4F4F4;
     text-align: center;
-    height: 60%;
-    padding-top: 10%;
-    padding-bottom: 10%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 100%;
+    bottom: 0px;
+    top: 1160px;
+    position: absolute;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
   }.footerTitle{
     font-size: 1.6em;
   }.footerSubTitle{
@@ -259,6 +303,7 @@ body{
       } 
       .hamburgerIcon{
         height: 35px;
+        padding-top: 8%;
       }.hamburgerIcon span {
         height: 0.3rem;
         width: 140%;
@@ -290,14 +335,68 @@ body{
         height: 60%;
         padding-top: 220%;
     }
+    /*PURPOSE SECTION */
+    .discContainer{
+      height: 150vh;
+      position: absolute;
+      width: 100%;
+      margin-top: 20%;
+      display: flex;
+      justify-content: center;
+    } .nameContainer{
+      font-size: 1.8em;
+      padding: 50px;
+      color:#FBEED7;
+      position: absolute;
+    } .imageContainer{
+      width: 375px;
+      height: 475px;
+      border-radius: 20px;
+      position: absolute;
+      margin: 300px;
+    }.noteContainer{
+      width: 425px;
+      height: 320px;
+      border-radius: 20px;
+      position: absolute;
+      margin: 650px;
+      transition: transform 0.325s;
+    }.noteContainer:hover{
+      transform: scale(1.125);
+      transition: transform 0.325s;
+      transform: rotate(-10deg);
+    }.nameContainer{
+    font-size: 2.25em;
+    padding: 50px;
+    padding-bottom: 4;
+    color:#FBEED7;
+    position: absolute;
+  } 
+    .personalContainer{
+    width: 70%;
+    height: 50%;
+    margin-top: 870px;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: center;
+  }#introWord{
+    padding-bottom: 25px;
+    color: #FBEED7;
+  }#allWords{
+    background-color: #161616;
+    border-radius: 12px;
+    width: 100%;
+    font-size: 1.3rem;
+    height: 46.5rem;
+    padding-top: 250px;
+    padding: 35px;
+    color: #F4F4F4;
+  }
     /*FOOTER SECTION*/
     .footerContainer{
-      padding: 15%;
-      text-align: center;
-      height: 60%;
-      padding-top: 20%;
-      padding-bottom: 20%;
-    }.footerTitle{
+      top: 162vh;
+    }
+    .footerTitle{
       font-size: 1.6em;
     }.footerSubTitle{
       font-size: 1.2em;
@@ -659,13 +758,13 @@ body{
     }.aboutSubTitle{
       text-align: center;
       margin: 2%;
-      font-size: 2.0em;
+      font-size: 1.7em;
       color: #F4F4F4;
     }.aboutDisc{
       color: #F4F4F4;
       margin-right: 6%;
       margin-left: 6%;
-      font-size: 2.0em;
+      font-size: 1.7em;
       text-align: center;
     }
     /*CAROUSEL SECTION */
