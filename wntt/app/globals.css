@@ -29,7 +29,7 @@ body{
 
 /*Responsive Design --> Media Queries*/
   /*xs*/
-  @media (min-width: 475px){
+  @media (min-width: 350px){
     /*HERO SECTION*/
         /*Navigation Bar*/
         .hamburgerContainer{
@@ -233,7 +233,7 @@ body{
   }
     /*PURPOSE SECTION */
   .discContainer{
-    height: 120vh;
+    height: 165vh;
     position: absolute;
     width: 100%;
     margin-top: 20%;
@@ -241,6 +241,7 @@ body{
     justify-content: center;
   } .nameContainer{
     font-size: 1.8em;
+    display: flex;
     padding: 50px;
     color:#FBEED7;
     position: absolute;
@@ -250,11 +251,13 @@ body{
     border-radius: 20px;
     position: absolute;
     margin: 250px;
+    display: flex;
   }.personalContainer{
-    width: 70%;
-    height: 100%;
+    height: fit-content;
     margin-top: 700px;
     font-size: 1.1em;
+    /*Fit-Content breaks div for text*/
+    width: fit-content;
     display: flex;
     justify-content: center;
   }#introWord{
@@ -263,9 +266,7 @@ body{
   }#allWords{
     background-color: #161616;
     border-radius: 12px;
-    width: 100%;
-    font-size: 1.1rem;
-    height: 46.5rem;
+    width: 50%;
     padding-top: 250px;
     padding: 35px;
     color: #F4F4F4;
@@ -274,19 +275,20 @@ body{
   .footerContainer{
     background-color: #F4F4F4;
     text-align: center;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-top: 10px;
     width: 100%;
     bottom: 0px;
-    top: 1160px;
-    position: absolute;
-    height: 20%;
+    position: relative;
+    height: 150px;
     display: flex;
     flex-direction: column;
+  }.logoContainer{
+    margin: auto;
   }.footerTitle{
-    font-size: 1.6em;
+    font-size: 1.0em;
   }.footerSubTitle{
-    font-size: 1.2em;
+    font-size: 1.0em;
   }.footerEmail{
     font-size: 1.2em;
     padding-top: 5%;
@@ -354,17 +356,6 @@ body{
       border-radius: 20px;
       position: absolute;
       margin: 300px;
-    }.noteContainer{
-      width: 425px;
-      height: 320px;
-      border-radius: 20px;
-      position: absolute;
-      margin: 650px;
-      transition: transform 0.325s;
-    }.noteContainer:hover{
-      transform: scale(1.125);
-      transition: transform 0.325s;
-      transform: rotate(-10deg);
     }.nameContainer{
     font-size: 2.25em;
     padding: 50px;
@@ -372,11 +363,12 @@ body{
     color:#FBEED7;
     position: absolute;
   } 
-    .personalContainer{
-    width: 70%;
-    height: 50%;
-    margin-top: 870px;
+  .personalContainer{
+    height: fit-content;
+    margin-top: 875px;
     font-size: 1.1em;
+    /*Fit-Content breaks div for text*/
+    width: fit-content;
     display: flex;
     justify-content: center;
   }#introWord{
@@ -385,25 +377,12 @@ body{
   }#allWords{
     background-color: #161616;
     border-radius: 12px;
-    width: 100%;
-    font-size: 1.3rem;
-    height: 46.5rem;
+    width: 50%;
     padding-top: 250px;
     padding: 35px;
     color: #F4F4F4;
   }
-    /*FOOTER SECTION*/
-    .footerContainer{
-      top: 162vh;
-    }
-    .footerTitle{
-      font-size: 1.6em;
-    }.footerSubTitle{
-      font-size: 1.2em;
-    }.footerEmail{
-      font-size: 1.2em;
-      padding-top: 5%;
-    }
+
   }
 
 
@@ -438,7 +417,6 @@ body{
       .navContainer li{      
         list-style: none;
         align-items: center;
-
         display: flex;
         text-decoration: none;
         height: 40px;
@@ -474,7 +452,7 @@ body{
         padding: 10%;
         margin: auto;
         height: 65%;
-        padding-top: 30%; 
+        padding-top: 17.5%; 
       }.heroTitleThin{
         font-size: 2.0em;
       }.heroDisc{
@@ -507,23 +485,23 @@ body{
     .aboutContainer{
       height: 80%;
       background-color: #292727;
-      padding-top: 20%;
+      padding-top: 15%;
       padding-bottom: 20%;
     }.aboutTitle{
-      font-size: 1.2em;
+      font-size: 1.7em;
       text-align: center;
       background-color: #292727;
       color:#FBEED7;
     }.aboutSubTitle{
       text-align: center;
       margin: 4%;
-      font-size: 1.0em;
+      font-size: 1.5em;
       color: #F4F4F4;
     }.aboutDisc{
       color: #F4F4F4;
       margin-right: 6%;
       margin-left: 6%;
-      font-size: 1.0em;
+      font-size: 1.3em;
       text-align: center;
     }
     /*CAROUSEL SECTION */
@@ -533,22 +511,6 @@ body{
         font-size: 2.0em;
         height: 60%;
         padding-top: 220%;
-  }
-    /*FOOTER SECTION*/
-  .footerContainer{
-    padding: 15%;
-    background-color: #F4F4F4;
-    text-align: center;
-    height: 40%;
-    padding-top: 10%;
-    padding-bottom: 10%;
-  }.footerTitle{
-    font-size: 1.6em;
-  }.footerSubTitle{
-    font-size: 1.2em;
-  }.footerEmail{
-    font-size: 1.2em;
-    padding-top: 5%;
   }
 }  
 
@@ -578,11 +540,12 @@ body{
         display: flex;
         width: 95vw;
         margin-right: 5%;
-        justify-content: flex-end;
+        right: 0px;
+        justify-content: space-evenly;
       }
       .navContainer li{      
         list-style: none;
-        align-items: center;
+        align-items: sp;
         justify-content: center;
         display: flex;
         text-decoration: none;
@@ -620,7 +583,7 @@ body{
         padding: 10%;
         margin: auto;
         height: 65%;
-        padding-top: 12.5%;
+        padding-top: 17.5%;
       }.heroTitleThin{
         font-size: 2.0em;
       }.heroDisc{
@@ -680,22 +643,20 @@ body{
         height: 60%;
         padding-top: 220%;
   }
-    /*FOOTER SECTION*/
-  .footerContainer{
-    padding: 15%;
-    background-color: #F4F4F4;
-    text-align: center;
-    height: 40%;
-    padding-top: 5%;
-    padding-bottom: 5%;
-  }.footerTitle{
-    font-size: 1.6em;
-  }.footerSubTitle{
-    font-size: 1.2em;
-  }.footerEmail{
-    font-size: 1.2em;
-    padding-top: 5%;
-  }
+    /*PURPOSE SECTION */
+    .discContainer{
+      margin-top: 20%;
+    }.nameContainer{
+      font-size: 2.5em;
+    }.imageContainer{
+      width: 400px;
+      margin: 315px;
+      height: 525px;
+    }.personalContainer{
+      margin-top: 925px;
+      font-size: 1.3em;
+    }
+
 }  
   
   /*Xl*/
@@ -712,10 +673,9 @@ body{
         color: #FBEED7;
         font-size: 4.0em;
         padding: 10%;
-        padding-bottom: 5%;
         margin: auto;
         height: 65%;
-        padding-top: 8%; 
+        padding-top: 11%; 
       }.heroTitleThin{
         font-size: 2.0em;
       }.heroDisc{
@@ -748,8 +708,8 @@ body{
     .aboutContainer{
       height: 80%;
       background-color: #292727;
-      padding-top: 6%;
-      padding-bottom: 7%;
+      padding-top: 10%;
+      padding-bottom: 10%;
     }.aboutTitle{
       font-size: 2.2em;
       text-align: center;
@@ -775,20 +735,19 @@ body{
         height: 60%;
         padding-top: 220%;
   }
-    /*FOOTER SECTION*/
-  .footerContainer{
-    padding: 15%;
-    background-color: #F4F4F4;
-    text-align: center;
-    height: 40%;
-    padding-top: 2.5%;
-    padding-bottom: 2.5%;
-  }.footerTitle{
-    font-size: 1.6em;
-  }.footerSubTitle{
-    font-size: 1.2em;
-  }.footerEmail{
-    font-size: 1.2em;
-    padding-top: 5%;
-  }
-}  
+      /*PURPOSE SECTION */
+    .discContainer{
+      margin-top: 12.5%;
+    } .nameContainer{
+      font-size: 2.8em;
+    } .imageContainer{
+      width: 475px;
+      margin: 350px;
+      height: 600px;
+    }
+    .personalContainer{
+      margin-top: 1050px;
+      font-size: 1.4em;
+    }
+
+} 
