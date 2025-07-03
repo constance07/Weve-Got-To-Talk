@@ -68,7 +68,7 @@ body{
         height: 100%;
         align-items: center;
       } 
-      }.hamburgerContainer a{
+      .hamburgerContainer a{
         text-decoration: none;
         padding: 5%;
         display: flex;
@@ -271,11 +271,31 @@ body{
     padding: 35px;
     color: #F4F4F4;
   }
+  /*CONTACT SECTION*/
+  .contactContainer{
+    width: 100%;
+    height: 1200px;
+    padding-top: 12.5%;
+    background-color: #161616;
+  }.contactTitle{
+    color: #FBEED7;
+    font-size: 1.5em;
+    width: 100%;
+    text-align: center;
+    display: block;
+    position: relative;
+    height: 50px;
+    padding-top: 50px;
+  }.contactSubTitle{
+    color: #FBEED7;
+    padding: 15px;
+    font-size: 1.0e;
+  }
     /*FOOTER SECTION*/
   .footerContainer{
     background-color: #F4F4F4;
     text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 32.5px;
     padding-top: 10px;
     width: 100%;
     bottom: 0px;
@@ -293,7 +313,7 @@ body{
     font-size: 1.2em;
     padding-top: 5%;
   }
-  
+}
 
 
   /*Sm*/
@@ -382,7 +402,14 @@ body{
     padding: 35px;
     color: #F4F4F4;
   }
-
+  /*CONTACT SECTION*/
+  .contactTitle{
+    font-size: 1.7em;
+  }.contactSubTitle{
+    font-size: 1.2em;
+    padding: 25px;
+  }
+  
   }
 
 
@@ -399,33 +426,35 @@ body{
       }
       .navContainer{
         display: flex;
+        width: 100%;
         color: #FBEED7;
         position: absolute;
         flex-direction: row;
         height: 115px;
-        width: 100%;
+        background-color: #161616;
         align-items: center;
-        background-color: #161616;;
       }.navContainer ul{
         align-items: flex-end;
         color: #FBEED7;
-        margin-left: 5px;
         display: flex;
         width: 95vw;
+        margin: auto;
+        right: 0px;
         justify-content: space-evenly;
       }
       .navContainer li{      
         list-style: none;
-        align-items: center;
+        align-items: sp;
+        justify-content: center;
         display: flex;
         text-decoration: none;
         height: 40px;
-        padding-right: 15%;
-        padding-left: 15%;
+        padding-right: 10%;
+        padding-left: 10%;
         color: #FBEED7;
         border-radius: 100px;
         transition: background-color .25s ease-in-out;
-        width: 100%;
+        width: 10vw;
       }
       .navContainer a{
         text-decoration: none;
@@ -433,6 +462,7 @@ body{
         font-size: 1.5em;
         cursor: pointer;
         flex-direction: row;
+        
       }
       .navContainer li:hover{
         text-decoration: none;
@@ -512,6 +542,14 @@ body{
         height: 60%;
         padding-top: 220%;
   }
+  /*CONTACT SECTION*/
+  .contactTitle{
+    font-size: 1.9em;
+    padding-top: 80px;
+  }
+  .contactSubTitle{
+    font-size: 1.3em;
+  }
 }  
 
 
@@ -539,7 +577,7 @@ body{
         color: #FBEED7;
         display: flex;
         width: 95vw;
-        margin-right: 5%;
+        margin: auto;
         right: 0px;
         justify-content: space-evenly;
       }
@@ -563,7 +601,7 @@ body{
         font-size: 1.5em;
         cursor: pointer;
         flex-direction: row;
-        margin: 15px;
+        
       }
       .navContainer li:hover{
         text-decoration: none;
@@ -656,7 +694,15 @@ body{
       margin-top: 925px;
       font-size: 1.3em;
     }
-
+  /*CONTACT SECTION*/
+  .contactTitle{
+    font-size: 2.5em;
+    padding-top: 80px;
+  }
+  .contactSubTitle{
+    font-size: 1.4em;
+    padding: 50px;
+  }
 }  
   
   /*Xl*/
@@ -733,7 +779,16 @@ body{
         color: #FBEED7;
         font-size: 2.0em;
         height: 60%;
-        padding-top: 220%;
+        padding-top: 70%;
+  }
+    /*CONTACT SECTION*/
+  .contactTitle{
+    font-size: 2.5em;
+    padding-top: 20px;
+  }
+  .contactSubTitle{
+    font-size: 1.6em;
+    padding: 60px;
   }
       /*PURPOSE SECTION */
     .discContainer{
@@ -741,7 +796,7 @@ body{
     } .nameContainer{
       font-size: 2.8em;
     } .imageContainer{
-      width: 475px;
+      width: 450px;
       margin: 350px;
       height: 600px;
     }

@@ -24,7 +24,7 @@ export default function Footer(){
                 {/*Footer Subtitle*/}
                 <div className='footerSubTitle'>
                     <div className= {be_Vietnam_Pro_VLight.className}>
-                        Created so you aren't a stranger to yourself.
+                        Created so you don't become a stranger to yourself.
                     </div>
                 </div>
             </div>
