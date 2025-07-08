@@ -274,8 +274,9 @@ body{
   /*CONTACT SECTION*/
   .contactContainer{
     width: 100%;
-    height: 1200px;
+    height: 100%;
     padding-top: 12.5%;
+    padding-bottom: 100px;
     background-color: #161616;
   }.contactTitle{
     color: #FBEED7;
@@ -289,7 +290,54 @@ body{
   }.contactSubTitle{
     color: #FBEED7;
     padding: 15px;
-    font-size: 1.0e;
+    font-size: 1.0em;
+  }.formBackground{
+    display: inline-block;
+    height: 100vh;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }.form{
+    width: 320px;
+    margin: 0 auto;
+    padding: 80px;
+  }.formField{
+    display: flex;
+    flex-wrap: wrap;
+    border: none;
+  }.formSubTitles{
+    color: #FBEED7;
+    margin-bottom: 15px;
+  }#input, #textArea{
+    width: 280px;
+    background-color: #F4F4F4;
+    margin-bottom: 80px;
+    padding: 20px;
+    resize: none;
+    overflow: hidden;  
+    color: #292727;
+    font-size: 15px;
+    border: 0px;
+    border-radius: 25px;
+    /* outline: none */
+  }#textArea{
+    field-sizing: content;
+  }#submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 50%;
+    font-size: 1.0em; 
+    border-radius: 100px;
+    border: 0px;
+    margin: 0 auto;
+    transition: 0.2s ease-in-out;
+  }#submit:hover{
+    background-color: #c8c8c8;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
   }
     /*FOOTER SECTION*/
   .footerContainer{
@@ -670,7 +718,7 @@ body{
       color: #F4F4F4;
       margin-right: 6%;
       margin-left: 6%;
-      font-size: 1.5em;
+      font-size: 1.4em;
       text-align: center;
     }
     /*CAROUSEL SECTION */
@@ -770,7 +818,7 @@ body{
       color: #F4F4F4;
       margin-right: 6%;
       margin-left: 6%;
-      font-size: 1.7em;
+      font-size: 1.5em;
       text-align: center;
     }
     /*CAROUSEL SECTION */
