@@ -178,11 +178,12 @@ body{
         font-size: 0.6em;
         margin: 5px;
         margin-top: 6%;
+        margin-bottom: 6%;
         letter-spacing: 5px;
       }
       /*Start Button*/
       .startButton button{
-        color: #161616;
+        color: black;
         background-color: #F4F4F4;
         font-size: 0.5em;
         border-color: #F4F4F4;
@@ -273,33 +274,29 @@ body{
   }
   /*CONTACT SECTION*/
   .contactContainer{
-    width: 100%;
-    height: 100%;
     padding-top: 12.5%;
     padding-bottom: 100px;
     background-color: #161616;
   }.contactTitle{
     color: #FBEED7;
-    font-size: 1.5em;
+    font-size: 1.2em;
     width: 100%;
-    text-align: center;
     display: block;
-    position: relative;
-    height: 50px;
+    height: 100%;
+    text-align: center;
     padding-top: 50px;
   }.contactSubTitle{
     color: #FBEED7;
     padding: 15px;
+    text-align: center;
     font-size: 1.0em;
   }.formBackground{
-    display: inline-block;
-    height: 100vh;
+    display: inline-block;  
     margin-top: 15px;
     align-items: center;
     justify-content: center;
     width: 100%;
   }.form{
-    width: 320px;
     margin: 0 auto;
     padding: 80px;
   }.formField{
@@ -308,15 +305,16 @@ body{
     border: none;
   }.formSubTitles{
     color: #FBEED7;
+    font-size: 1.1em;
     margin-bottom: 15px;
   }#input, #textArea{
-    width: 280px;
+    width: 100%;
     background-color: #F4F4F4;
-    margin-bottom: 80px;
+    margin-bottom: 90px;
     padding: 20px;
     resize: none;
     overflow: hidden;  
-    color: #292727;
+    color: #161616;
     font-size: 15px;
     border: 0px;
     border-radius: 25px;
@@ -338,6 +336,9 @@ body{
     background-color: #c8c8c8;
     transition: 0.2s ease-in-out;
     cursor: pointer;
+  }#submit a{
+    text-decoration: none;
+    color: #161616;
   }
     /*FOOTER SECTION*/
   .footerContainer{
@@ -456,6 +457,17 @@ body{
   }.contactSubTitle{
     font-size: 1.2em;
     padding: 25px;
+  }.form{
+    width: 400px;
+  }.formSubTitles{
+    font-size: 1.2em;
+  }#input, #textArea{
+    width: 350px;
+    font-size: 18px;;
+  } #submit{
+    height: 50px;
+    width: 50%;
+    font-size: 1.2em; 
   }
   
   }
@@ -486,19 +498,17 @@ body{
         color: #FBEED7;
         display: flex;
         width: 95vw;
-        margin: auto;
         right: 0px;
         justify-content: space-evenly;
       }
       .navContainer li{      
         list-style: none;
-        align-items: sp;
         justify-content: center;
         display: flex;
         text-decoration: none;
-        height: 40px;
-        padding-right: 10%;
-        padding-left: 10%;
+        height: 40%;
+        padding-right: 25px;
+        padding-left: 25px;
         color: #FBEED7;
         border-radius: 100px;
         transition: background-color .25s ease-in-out;
@@ -538,15 +548,13 @@ body{
         margin: 5px;
         margin-top: 6%;
         letter-spacing: 5px;
+        margin-top: 3%;
+        margin-bottom: 1%;
       }
       /*Start Button*/
       .startButton button{
-        color: #161616;
-        background-color: #F4F4F4;
         font-size: 0.425em;
-        border-color: #F4F4F4;
         border-radius: 35px;
-        border-style: none;
         width: 300px;
         height: 45px;
         margin-top: 6%;
@@ -597,6 +605,8 @@ body{
   }
   .contactSubTitle{
     font-size: 1.3em;
+  }.formSubTitles{
+    font-size: 1.3em;
   }
 }  
 
@@ -630,14 +640,9 @@ body{
         justify-content: space-evenly;
       }
       .navContainer li{      
-        list-style: none;
-        align-items: sp;
         justify-content: center;
         display: flex;
         text-decoration: none;
-        height: 40px;
-        padding-right: 10%;
-        padding-left: 10%;
         color: #FBEED7;
         border-radius: 100px;
         transition: background-color .25s ease-in-out;
@@ -675,28 +680,9 @@ body{
       }.heroDisc{
         font-size: 0.55em;
         margin: 5px;
-        margin-top: 6%;
+        margin-top: 3%;
+        margin-bottom: 1%;
         letter-spacing: 5px;
-      }
-      /*Start Button*/
-      .startButton button{
-        color: #161616;
-        background-color: #F4F4F4;
-        font-size: 0.425em;
-        border-color: #F4F4F4;
-        border-radius: 35px;
-        border-style: none;
-        width: 300px;
-        height: 45px;
-        margin-top: 6%;
-        outline: none;
-        margin-bottom: 4%;
-        transition: 0.2s ease-in-out;
-      }
-      .startButton button:hover{
-        background-color: #c8c8c8;
-        transition: 0.2s ease-in-out;
-        cursor: pointer;
       }
     /*ABOUT SECTION*/  
     .aboutContainer{
@@ -743,13 +729,28 @@ body{
       font-size: 1.3em;
     }
   /*CONTACT SECTION*/
+  .contactContainer{
+    padding-bottom: 200px;
+  }
   .contactTitle{
     font-size: 2.5em;
     padding-top: 80px;
   }
   .contactSubTitle{
-    font-size: 1.4em;
+    font-size: 1.7em;
     padding: 50px;
+  }.form{
+    width: 540px;
+  }.formSubTitles{
+    font-size: 1.5em;
+  }#input, #textArea{
+    width: 500px;
+    margin-bottom: 125px;
+    font-size: 19px;;
+  } #submit{
+    height: 55px;
+    width: 50%;
+    font-size: 1.3em; 
   }
 }  
   
@@ -768,35 +769,24 @@ body{
         font-size: 4.0em;
         padding: 10%;
         margin: auto;
-        height: 65%;
+        height: 60%;
         padding-top: 11%; 
       }.heroTitleThin{
         font-size: 2.0em;
       }.heroDisc{
         font-size: 0.45em;
         margin: 5px;
-        margin-top: 2%;
+        margin-top: 2%;    
         letter-spacing: 5px;
       }
       /*Start Button*/
       .startButton button{
-        color: #161616;
-        background-color: #F4F4F4;
         font-size: 0.35em;
-        border-color: #F4F4F4;
         border-radius: 35px;
-        border-style: none;
-        width: 300px;
-        height: 45px;
+        width: 350px;
+        height: 50px;
         margin-top: 4%;
-        outline: none;
-        margin-bottom: 4%;
-        transition: 0.2s ease-in-out;
-      }
-      .startButton button:hover{
-        background-color: #c8c8c8;
-        transition: 0.2s ease-in-out;
-        cursor: pointer;
+        margin-bottom: 0%;
       }
     /*ABOUT SECTION*/  
     .aboutContainer{
@@ -831,12 +821,25 @@ body{
   }
     /*CONTACT SECTION*/
   .contactTitle{
-    font-size: 2.5em;
+    font-size: 2.8em;
     padding-top: 20px;
+    margin-top: 60px;;
   }
   .contactSubTitle{
-    font-size: 1.6em;
+    font-size: 1.8em;
     padding: 60px;
+  }.form{
+    width: 700px;
+  }.formSubTitles{
+    font-size: 1.6em;
+  }#input, #textArea{
+    width: 120%;
+    margin-bottom: 150px;
+    font-size: 20px;;
+  } #submit{
+    height: 60px;
+    width: 50%;
+    font-size: 1.3em; 
   }
       /*PURPOSE SECTION */
     .discContainer{

@@ -28,6 +28,7 @@ export default function Email(){
     {/*Send to personal Email*/}
     const handleSubmit = async(event) => {
         {/*Check if field is empty */}
+        
         event.preventDefault();
         if(!formData.name || !formData.email || !formData.message) return;
 
@@ -45,13 +46,13 @@ export default function Email(){
                 {/*Title*/}
                 <div className='contactTitle'>
                     <div className= {be_Vietnam_Pro.className}>
-                        <h1><center>LET'S CONNECT</center></h1>
+                        <h1>LET'S CONNECT</h1>
                     </div>
                 </div>
                 {/*Sub-Title*/}
                 <div className ='contactSubTitle'>
                     <div className={be_Vietnam_Pro_VLight.className}>
-                        <center>Ask me anything, or just say hi... </center>
+                        Ask me anything, or just say hi... 
                     </div>
                 </div>
                 {/*Form*/}
@@ -59,13 +60,33 @@ export default function Email(){
                     <form onSubmit = {handleSubmit} className='form' >
                         <fieldset className='formField'>
                             <h2 className='formSubTitles'>NAME</h2>
-                                <input className= {be_Vietnam_Pro_VLight.className} id='input' type = 'text' name = 'name'placeholder='name' value = {formData.name} onChange={handleChange}/>
+                                <input 
+                                className= {be_Vietnam_Pro_VLight.className} 
+                                id='input' 
+                                type = 'text'
+                                name = 'name'
+                                value = {formData.name}
+                                onChange={handleChange}/>
                             <h2 className='formSubTitles'>E-MAIL</h2>
-                                <input  className= {be_Vietnam_Pro_VLight.className} id='input'type = 'text' name = 'email'placeholder='email' value = {formData.email} onChange={handleChange}/>
+                                <input  
+                                className= {be_Vietnam_Pro_VLight.className} 
+                                id='input'
+                                type = 'text' 
+                                name = 'email'
+                                value = {formData.email} 
+                                onChange={handleChange}/>
                             <h2 className='formSubTitles'>MESSAGE</h2>
-                            <textarea  className= {be_Vietnam_Pro_VLight.className} id='textArea' placeholder='message' name = 'message' value = {formData.message} onChange={handleChange}></textarea>
+                            <textarea  
+                                className= {be_Vietnam_Pro_VLight.className} 
+                                id='textArea' 
+                                name = 'message' 
+                                value = {formData.message} 
+                                onChange={handleChange}>
+                            </textarea>
                         </fieldset>
-                        <button id = "submit" className={be_Vietnam_Pro.className}>SEND</button>
+                            <button id = "submit" className={be_Vietnam_Pro.className}>
+                                <a id = "submitLink" href ="/(4)contact/contactSubmittal">SEND</a>   
+                            </button>
                     </form>
                 </div>
             </div>
