@@ -278,14 +278,15 @@ body{
     padding-bottom: 100px;
     background-color: #161616;
   }.contactTitle{
+    
     color: #FBEED7;
     font-size: 1.2em;
-    width: 100%;
     display: block;
     height: 100%;
     text-align: center;
     padding-top: 50px;
   }.contactSubTitle{
+    
     color: #FBEED7;
     padding: 15px;
     text-align: center;
@@ -307,7 +308,7 @@ body{
     color: #FBEED7;
     font-size: 1.1em;
     margin-bottom: 15px;
-  }#input, #textArea{
+  }#inputA,#inputB, #textArea{
     width: 100%;
     background-color: #F4F4F4;
     margin-bottom: 90px;
@@ -328,18 +329,28 @@ body{
     height: 40px;
     width: 50%;
     font-size: 1.0em; 
+    background-color: #F4F4F4;
     border-radius: 100px;
     border: 0px;
     margin: 0 auto;
+    color: #161616;
+    text-decoration: dotted;
     transition: 0.2s ease-in-out;
   }#submit:hover{
-    background-color: #c8c8c8;
     transition: 0.2s ease-in-out;
+    background-color: #c8c8c8;
     cursor: pointer;
-  }#submit a{
+  }#submitLink{
     text-decoration: none;
-    color: #161616;
   }
+    /*Form Validation*/
+    #nameError, #emailError, #messageError{
+      font-size: 0.8em;
+      margin-bottom: 15px;
+      width: 100%;
+      color: red;
+    }
+
     /*FOOTER SECTION*/
   .footerContainer{
     background-color: #F4F4F4;
@@ -348,7 +359,7 @@ body{
     padding-top: 10px;
     width: 100%;
     bottom: 0px;
-    position: relative;
+    position:relative;
     height: 150px;
     display: flex;
     flex-direction: column;
@@ -507,8 +518,8 @@ body{
         display: flex;
         text-decoration: none;
         height: 40%;
-        padding-right: 25px;
-        padding-left: 25px;
+        padding-right: 30px;
+        padding-left: 30px;
         color: #FBEED7;
         border-radius: 100px;
         transition: background-color .25s ease-in-out;
@@ -608,6 +619,10 @@ body{
   }.formSubTitles{
     font-size: 1.3em;
   }
+  /*Form Validation*/
+    #nameError, #emailError, #messageError{
+      font-size: 0.9em;
+    }
 }  
 
 
@@ -752,6 +767,10 @@ body{
     width: 50%;
     font-size: 1.3em; 
   }
+    /*Form Validation*/
+    #nameError, #emailError, #messageError{
+      font-size: 1.0em;
+    }
 }  
   
   /*Xl*/
@@ -770,7 +789,7 @@ body{
         padding: 10%;
         margin: auto;
         height: 60%;
-        padding-top: 11%; 
+        padding-top: 13%; 
       }.heroTitleThin{
         font-size: 2.0em;
       }.heroDisc{

@@ -1,13 +1,18 @@
 'use client';
 import {useState} from "react";
 
-import '../globals.css'
+import '../globals.css';
+
 {/* Fonts */}
 import { Be_Vietnam_Pro} from 'next/font/google';
 {/*VBold*/}const be_Vietnam_Pro = Be_Vietnam_Pro({subsets: ['latin'], weight: '800'})
 {/*Light*/}const be_Vietnam_Pro_Light = Be_Vietnam_Pro({subsets: ['latin'], weight: '300'})
 {/*VLight*/}const be_Vietnam_Pro_VLight = Be_Vietnam_Pro({subsets: ['latin'], weight: '200'})
+
 {/*General Imports*/}
+import { ToastContainer, toast } from 'react-toastify';
+
+
 
 export default function Email(){
 
@@ -19,25 +24,59 @@ export default function Email(){
     };
 
     const [formData, setFormData] = useState(initialFormData);
-    
+
+
     {/*Update Input Value*/}
     const handleChange = (event) => {
-        setFormData({...formData, [event.target.name]: event.target.value});
+        setFormData({...formData, [event.target.name]: event.target.value})
     }
 
     {/*Send to personal Email*/}
     const handleSubmit = async(event) => {
-        {/*Check if field is empty */}
-        
+        {/*Dont let field be empty*/}
         event.preventDefault();
-        if(!formData.name || !formData.email || !formData.message) return;
+
+        {/* Grab HTML Elements */}
+        const nameError = document.getElementById("nameError");
+        const emailError = document.getElementById("emailError");
+        const messageError = document.getElementById("messageError");
+
+        {/*Valid Email*/}
+        const emailErrorB = document.getElementById("inputB"); 
+        const validEmail = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/; 
+
+        if(!formData.name || !emailErrorB.value.match(validEmail) || !formData.message){
+            {/*If field is not valid, add error */}
+            if(!formData.name) {nameError.innerHTML = "* Please insert your name"};
+            if(!emailErrorB.value.match(validEmail)){emailError.innerHTML = "* Please insert a valid email"}
+            if(!formData.message){ messageError.innerHTML = "* Please type your message"};
+
+            {/*If field is now valid, remove error */}
+            if(formData.name) {nameError.innerHTML = ""};
+            if(emailErrorB.value.match(validEmail)){emailError.innerHTML = ""};
+            if(formData.message){messageError.innerHTML = ""};
+
+            toast.error('Please check all input fields.');
+            return false;
+        }
+
+        {/*Make sure all errors are removed*/}
+        nameError.innerHTML = "";
+        emailError.innerHTML = "";
+        messageError.innerHTML = "";
 
         try{
             const response = await fetch('/api/send', {
                 method: 'POST',
                 body: JSON.stringify({...formData}),
             });
-        } catch(error){}
+        {/*Email Sent !*/}
+            setFormData(initialFormData);
+            toast.success("Email was sent sucessfully!");
+        } catch(error){
+        {/*Email Error !*/}
+            toast.error('Oops, looks like something went wrong: ', error);
+        } 
     };
     
     return(
@@ -55,27 +94,31 @@ export default function Email(){
                         Ask me anything, or just say hi... 
                     </div>
                 </div>
+
                 {/*Form*/}
                 <div className = "formBackground">
-                    <form onSubmit = {handleSubmit} className='form' >
+                    <form name = "conctactForm" onSubmit = {handleSubmit} className='form' >
                         <fieldset className='formField'>
                             <h2 className='formSubTitles'>NAME</h2>
+                            <div className = {be_Vietnam_Pro_VLight.className} id = "nameError"></div>
                                 <input 
                                 className= {be_Vietnam_Pro_VLight.className} 
-                                id='input' 
+                                id='inputA' 
                                 type = 'text'
                                 name = 'name'
                                 value = {formData.name}
                                 onChange={handleChange}/>
                             <h2 className='formSubTitles'>E-MAIL</h2>
+                            <div className = {be_Vietnam_Pro_VLight.className} id = "emailError"></div>
                                 <input  
                                 className= {be_Vietnam_Pro_VLight.className} 
-                                id='input'
+                                id='inputB'
                                 type = 'text' 
                                 name = 'email'
                                 value = {formData.email} 
                                 onChange={handleChange}/>
                             <h2 className='formSubTitles'>MESSAGE</h2>
+                            <div className = {be_Vietnam_Pro_VLight.className} id = "messageError"></div>
                             <textarea  
                                 className= {be_Vietnam_Pro_VLight.className} 
                                 id='textArea' 
@@ -85,8 +128,11 @@ export default function Email(){
                             </textarea>
                         </fieldset>
                             <button id = "submit" className={be_Vietnam_Pro.className}>
-                                <a id = "submitLink" href ="/(4)contact/contactSubmittal">SEND</a>   
+                               SEND
                             </button>
+                            <div className= {be_Vietnam_Pro_VLight.className} >
+                                <ToastContainer/>
+                            </div >
                     </form>
                 </div>
             </div>
