@@ -151,7 +151,7 @@ body{
         justify-content: space-between;
         width: 2.25rem;
         height: 30px;
-        padding-top: 10%;
+        padding-top: 50px;
         margin-right: 12%;
         z-index: 5;
      }.hamburgerIcon span {
@@ -224,14 +224,66 @@ body{
       font-size: 1.0em;
       text-align: center;
     }
-    /*CAROUSEL SECTION */
-  .carouselContainer{
-        background-color: #292727;
-        color: #FBEED7;
-        font-size: 2.0em;
-        height: 60%;
-        padding-top: 220%;
+    /*CARD SECTION */
+  .cardContainer{
+    background-color: #292727;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }.directionContainer{
+    width: fit-content;
+    height: fit-content;
+    padding-top: 100px;
+    margin-bottom: 50px;
+    padding: 50px;
+    text-align: center;
+    font-size: 2.25em;
+    color: #FBEED7;
+  }.sliderContainer{
+    text-align: center;
+    width: 100%;
+    height: 850px;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 1.75em;
+    color: #FBEED7;
+  }.directionTitle{
+    font-size: 1.25em;
+    margin-top: 50px;
+  }.directionDisc{
+    padding-top: 50px;
+    font-size: 0.5em;
+    color: #F4F4F4;
+  }#selectTitle{
+    font-size: 0.7em;
+    margin-top: 50px;
+    border-radius: 100px;
+    text-align: center;
+  }.set1, .set2, .set3{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    justify-content: space-evenly;
+  }.set1{
+    margin-top: 50px;;
+  }.set1 button, .set2 button, .set3 button{
+        color: black;
+        background-color: #F4F4F4;
+        font-size: 16px;
+        border-color: #F4F4F4;
+        border-radius: 35px;
+        border-style: none;
+        width: 45px;
+        height: 45px;
+        margin: 5px;
+        transition: 0.2s ease-in-out;
   }
+
+  
     /*PURPOSE SECTION */
   .discContainer{
     height: 165vh;
@@ -241,21 +293,21 @@ body{
     display: flex;
     justify-content: center;
   } .nameContainer{
-    font-size: 1.8em;
+    font-size: 1.7em;
     display: flex;
     padding: 50px;
     color:#FBEED7;
     position: absolute;
   } .imageContainer{
-    width: 300px;
-    height: 390px;
+    width: 275px;
+    height: 360px;
     border-radius: 20px;
     position: absolute;
     margin: 250px;
     display: flex;
   }.personalContainer{
     height: fit-content;
-    margin-top: 700px;
+    margin-top: 690px;
     font-size: 1.1em;
     /*Fit-Content breaks div for text*/
     width: fit-content;
@@ -278,7 +330,6 @@ body{
     padding-bottom: 100px;
     background-color: #161616;
   }.contactTitle{
-    
     color: #FBEED7;
     font-size: 1.2em;
     display: block;
@@ -286,7 +337,6 @@ body{
     text-align: center;
     padding-top: 50px;
   }.contactSubTitle{
-    
     color: #FBEED7;
     padding: 15px;
     text-align: center;
@@ -340,8 +390,9 @@ body{
     transition: 0.2s ease-in-out;
     background-color: #c8c8c8;
     cursor: pointer;
-  }#submitLink{
-    text-decoration: none;
+  }#submit:active{
+    color: #373737;;
+    transition: 0.2s ease-in-out;
   }
     /*Form Validation*/
     #nameError, #emailError, #messageError{
@@ -350,7 +401,6 @@ body{
       width: 100%;
       color: red;
     }
-
     /*FOOTER SECTION*/
   .footerContainer{
     background-color: #F4F4F4;
@@ -385,7 +435,7 @@ body{
       } 
       .hamburgerIcon{
         height: 35px;
-        padding-top: 8%;
+        padding-top: 45px;
       }.hamburgerIcon span {
         height: 0.3rem;
         width: 140%;
@@ -408,14 +458,6 @@ body{
       font-size: 1.2em;
     }.aboutDisc{
       font-size: 1.2em;
-    }
-    /*CAROUSEL SECTION */
-    .carouselContainer{
-        background-color: #292727;
-        color: #FBEED7;
-        font-size: 2.0em;
-        height: 60%;
-        padding-top: 220%;
     }
     /*PURPOSE SECTION */
     .discContainer{
@@ -472,8 +514,8 @@ body{
     width: 400px;
   }.formSubTitles{
     font-size: 1.2em;
-  }#input, #textArea{
-    width: 350px;
+  }#inputA, #inputB, #textArea{
+    width: 100%;
     font-size: 18px;;
   } #submit{
     height: 50px;
@@ -515,9 +557,10 @@ body{
       .navContainer li{      
         list-style: none;
         justify-content: center;
+        align-items: center;
         display: flex;
         text-decoration: none;
-        height: 40%;
+        height: 50px;
         padding-right: 30px;
         padding-left: 30px;
         color: #FBEED7;
@@ -601,14 +644,13 @@ body{
       font-size: 1.3em;
       text-align: center;
     }
-    /*CAROUSEL SECTION */
-  .carouselContainer{
-        background-color: #292727;
-        color: #FBEED7;
-        font-size: 2.0em;
-        height: 60%;
-        padding-top: 220%;
+    /*CARD SECTION */
+    .cardContainer{
+      margin-top: 0px;
+      padding-top: 115px;
+      position: static;
   }
+  
   /*CONTACT SECTION*/
   .contactTitle{
     font-size: 1.9em;
@@ -655,10 +697,9 @@ body{
         justify-content: space-evenly;
       }
       .navContainer li{      
-        justify-content: center;
-        display: flex;
+        list-style: none;
         text-decoration: none;
-        color: #FBEED7;
+        height: 50px;
         border-radius: 100px;
         transition: background-color .25s ease-in-out;
         width: 10vw;
@@ -722,14 +763,7 @@ body{
       font-size: 1.4em;
       text-align: center;
     }
-    /*CAROUSEL SECTION */
-  .carouselContainer{
-        background-color: #292727;
-        color: #FBEED7;
-        font-size: 2.0em;
-        height: 60%;
-        padding-top: 220%;
-  }
+
     /*PURPOSE SECTION */
     .discContainer{
       margin-top: 20%;
@@ -758,8 +792,8 @@ body{
     width: 540px;
   }.formSubTitles{
     font-size: 1.5em;
-  }#input, #textArea{
-    width: 500px;
+  }#inputA,#inputB, #textArea{
+    width: 100;
     margin-bottom: 125px;
     font-size: 19px;;
   } #submit{
@@ -780,6 +814,9 @@ body{
       width: 100%;
     }
     .navContainer li{
+              list-style: none;
+        text-decoration: none;
+        height: 60px;
       font-size: 1.25em;
     }
       .heroContainer{
@@ -830,13 +867,30 @@ body{
       font-size: 1.5em;
       text-align: center;
     }
-    /*CAROUSEL SECTION */
-  .carouselContainer{
-        background-color: #292727;
-        color: #FBEED7;
-        font-size: 2.0em;
-        height: 60%;
-        padding-top: 70%;
+    /*CARD SECTION */
+    .cardContainer{
+      background-color: #292727;
+      display: flex;
+      margin-top: 0px;
+      padding-top: 115px;
+      flex-wrap: nowrap;
+      position: static;
+  }.directionContainer{
+      font-size: 2.80em;
+      margin-top: 125px;
+      padding:100px;
+      width: 50%;
+      height: 100%;
+  }.directionTitle{
+    font-size: 1.8em;
+  }.directionDisc{
+    font-size: 0.45em;
+    margin-top: 50px;
+  }.sliderContainer{
+    width: 100%;
+    height: 1100px;
+    font-size: 3.0em;
+    padding-top: 160px;
   }
     /*CONTACT SECTION*/
   .contactTitle{
@@ -851,10 +905,10 @@ body{
     width: 700px;
   }.formSubTitles{
     font-size: 1.6em;
-  }#input, #textArea{
+  }#inputA, #inputB, #textArea{
     width: 120%;
-    margin-bottom: 150px;
-    font-size: 20px;;
+    margin-bottom: 140px;
+    font-size: 20px;
   } #submit{
     height: 60px;
     width: 50%;

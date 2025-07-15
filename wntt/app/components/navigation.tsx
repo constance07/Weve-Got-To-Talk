@@ -57,8 +57,8 @@ export default function Navigation(){
                     {/*Pages*/}
                         <a className = "active-link" href ='/'><li>HOME</li></a>
                         <a className = "active-link" href ='/(1)cards'><li>CARDS</li></a>
-                        <a className = "active-link" href ="/(3)about"><li>ABOUT</li></a>
-                        <a className = "active-link" href ="/(4)contact"><li>CONTACT</li></a>
+                        <a className = "active-link" href ="/(2)about"><li>ABOUT</li></a>
+                        <a className = "active-link" href ="/(3)contact"><li>CONTACT</li></a>
                     </ul>    
             </nav>
 
@@ -70,8 +70,8 @@ export default function Navigation(){
                 {/*Pages*/}
                 <a className = "active-link" href ='/'><li>HOME</li></a>
                 <a className = "active-link" href ='/(1)cards'><li>CARDS</li></a>
-                <a className = "active-link" href ="/(3)about"><li>ABOUT</li></a>
-                <a className = "active-link" href ="/(4)contact"><li>CONTACT</li></a>
+                <a className = "active-link" href ="/(2)about"><li>ABOUT</li></a>
+                <a className = "active-link" href ="/(3)contact"><li>CONTACT</li></a>
             </ul>
         </nav>  
         </>

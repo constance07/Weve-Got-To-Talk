@@ -1,6 +1,6 @@
 'use client';
 import '../globals.css'
-import '../(3)about/local.css';
+import '../(2)about/local.css';
 {/* Fonts */}
 import { Be_Vietnam_Pro} from 'next/font/google';
 {/*VBold*/}const be_Vietnam_Pro = Be_Vietnam_Pro({subsets: ['latin'], weight: '800'})
@@ -22,7 +22,14 @@ export default function Disc(){
                     </div>
                 </div>
                 {/* My Image */}
-                <Image src = {bwCandyStore}  width = {380} height = {80} alt = 'Picture of Website Creator' quality={100} className = 'imageContainer'></Image>
+                <Image 
+                    src = {bwCandyStore} 
+                    width = {380} 
+                    height = {80} 
+                    alt = 'Picture of website creator' 
+                    quality={100} 
+                    className = 'imageContainer'>
+                </Image>
                 {/*Box --> a.k.a actual disc lol*/}
                 <div className = "personalContainer">
                     <div id = "allWords" className ={be_Vietnam_Pro_Light.className}>

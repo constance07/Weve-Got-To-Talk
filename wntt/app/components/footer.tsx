@@ -14,7 +14,14 @@ export default function Footer(){
         <>
             <div className='footerContainer'>
                 {/*Footer Image*/}
-                <Image src = {blankProfile}  width = {60} height = {60} alt = 'Picture of Brand Logo' quality={100} className='logoContainer'></Image>
+                <Image 
+                    src = {blankProfile}  
+                    width = {60} 
+                    height = {60} 
+                    alt = 'Picture of Brand Logo' 
+                    quality={100} 
+                    className='logoContainer'>
+                </Image>
                 {/*Footer Title*/}
                 <div className='footerTitle'>
                     <div className={be_Vietnam_Pro.className}>

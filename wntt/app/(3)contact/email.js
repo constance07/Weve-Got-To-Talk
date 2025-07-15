@@ -66,16 +66,12 @@ export default function Email(){
         messageError.innerHTML = "";
 
         try{
-            const response = await fetch('/api/send', {
-                method: 'POST',
-                body: JSON.stringify({...formData}),
-            });
         {/*Email Sent !*/}
             setFormData(initialFormData);
             toast.success("Email was sent sucessfully!");
         } catch(error){
         {/*Email Error !*/}
-            toast.error('Oops, looks like something went wrong: ', error);
+            toast.error('Oops, looks like something went wrong ', error);
         } 
     };
     
