@@ -1,0 +1,50 @@
+/*Adjust Card */
+@media (min-width: 350px){
+  #currentCard{
+    border-radius: 45px;
+    width: 325px;
+    height: 225px;
+    
+  }
+}
+@media (min-width: 475px){
+    #currentCard{
+        border-radius: 65px;
+        width: 390px;
+        height: 275px;
+    }
+}
+@media (min-width: 550px){
+    #currentCard{
+        border-radius: 65px;
+        width: 425px;
+        height: 300px;
+    }
+}
+@media (min-width: 600px){
+    #currentCard{
+        width: 475px;
+        height: 335px;
+    }
+  
+}
+@media (min-width: 800px){
+    #currentCard{
+      width: 525px;
+      height: 375px;  
+    }
+}
+@media(min-width: 1024px){
+    #currentCard{
+      margin-top: 30px;
+      width: 750px;
+      height: 535px;  
+    }
+}@media(min-width: 1280px){
+    #currentCard{
+      margin-top: 50px;
+      width: 775px;
+      border-radius: 85px;
+      height: 535px;
+    }
+}

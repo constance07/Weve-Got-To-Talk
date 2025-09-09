@@ -3,7 +3,6 @@ import Image from "next/image";
 {/*Imported Components*/}
 import Navigation from "@/app/components/navigation";
 import Footer from "@/app/components/footer";
-import Carousel from "../components/carousel";
 import Hero from "../components/hero";
 import About from "../components/about";
 import Library from "@/app/components/library";

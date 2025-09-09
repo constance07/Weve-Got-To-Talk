@@ -11,7 +11,12 @@ import { Be_Vietnam_Pro} from 'next/font/google';
 
 
 export default function Home() {
-
+<link
+  rel="icon"
+  href= '@/app/images/logo.png'
+  type="image/<generated>"
+  sizes="<generated>"
+/>
   return (
     <div className = {be_Vietnam_Pro.className}>
       <Navigation/>

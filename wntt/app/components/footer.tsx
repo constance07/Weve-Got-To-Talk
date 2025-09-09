@@ -8,6 +8,7 @@ import { Be_Vietnam_Pro} from 'next/font/google';
 {/*General Imports*/}
 import Image from 'next/image';
 import blankProfile from '../images/blankProfile.jpg';
+import THOSLogo from '../images/THOSLogo.png';
 
 export default function Footer(){
     return(
@@ -15,9 +16,9 @@ export default function Footer(){
             <div className='footerContainer'>
                 {/*Footer Image*/}
                 <Image 
-                    src = {blankProfile}  
-                    width = {60} 
-                    height = {60} 
+                    src = {THOSLogo}  
+                    width = {68} 
+                    height = {65} 
                     alt = 'Picture of Brand Logo' 
                     quality={100} 
                     className='logoContainer'>
@@ -25,7 +26,7 @@ export default function Footer(){
                 {/*Footer Title*/}
                 <div className='footerTitle'>
                     <div className={be_Vietnam_Pro.className}>
-                        © 2025 THE HOUSE OF SOFTWARE. All rights reserved.
+                        © 2025 THE HAUS OF SOFTWARE™. All Rights Reserved.
                     </div>
                 </div>
                 {/*Footer Subtitle*/}

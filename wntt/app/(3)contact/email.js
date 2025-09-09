@@ -123,8 +123,8 @@ export default function Email(){
                                 onChange={handleChange}>
                             </textarea>
                         </fieldset>
-                            <button id = "submit" className={be_Vietnam_Pro.className}>
-                               SEND
+                            <button id = "submit" className={be_Vietnam_Pro_Light.className}>
+                               Send
                             </button>
                             <div className= {be_Vietnam_Pro_VLight.className} >
                                 <ToastContainer/>

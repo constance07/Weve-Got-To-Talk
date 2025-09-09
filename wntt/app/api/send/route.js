@@ -1,7 +1,7 @@
 import { EmailTemplate } from "../../components/emailTemplate";
 import { Resend } from 'resend';
 
-const resend = new Resend("re_RzmRwNCW_7raNtfH8CWkKJXNzwLRFS93y");
+const resend = new Resend('re_apjYFNHg_JmHhSKV7dEtYvsFXeu6yxDym');
 
 export async function POST(req) {
 {/*Get Form Data from Request*/}

@@ -12,7 +12,7 @@ export default function Hero(){
         {/*Hero Title*/}
             <div className='heroTitle'>
                 <div className = {be_Vietnam_Pro.className}>
-                    <h1>WE<br/>NEED TO<br/></h1>
+                    <h1>WE'VE<br/>GOT TO<br/></h1>
                 </div>
                 <div className= {be_Vietnam_Pro_VLight.className}>
                     <div className='heroTitleThin'>
