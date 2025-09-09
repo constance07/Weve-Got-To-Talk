@@ -1,7 +1,7 @@
 import { EmailTemplate } from "../../components/emailTemplate";
 import { Resend } from 'resend';
 
-const resend = new Resend('re_apjYFNHg_JmHhSKV7dEtYvsFXeu6yxDym');
+const resend = new Resend('re_bqGKF3Nk_Pt6em2jZ5w9XtFAbcPf3Xns5');
 
 export async function POST(req) {
 {/*Get Form Data from Request*/}
@@ -9,7 +9,7 @@ export async function POST(req) {
   const email = body
   try {
     const { data, error } = await resend.emails.send({
-      from: 'Acme <onboarding@resend.dev>',
+      from: 'Website Contact <contact@wevegottotalk.net>',
       to: ['serenc0107@gmail.com'],
       subject: 'WNTT: Contact Form Submission',
       react: EmailTemplate({ 
