@@ -65,12 +65,18 @@ export default function Email(){
         emailError.innerHTML = "";
         messageError.innerHTML = "";
 
+        
         try{
-        {/*Email Sent !*/}
+            await fetch("/api/send", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData),
+        });
+        /*Email Sent !*/
             setFormData(initialFormData);
             toast.success("Email was sent sucessfully!");
         } catch(error){
-        {/*Email Error !*/}
+        /*Email Error !*/
             toast.error('Oops, looks like something went wrong ', error);
         } 
     };

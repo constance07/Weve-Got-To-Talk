@@ -17,8 +17,8 @@ export default function Footer(){
                 {/*Footer Image*/}
                 <Image 
                     src = {THOSLogo}  
-                    width = {68} 
-                    height = {65} 
+                    width = {60} 
+                    height = {75} 
                     alt = 'Picture of Brand Logo' 
                     quality={100} 
                     className='logoContainer'>

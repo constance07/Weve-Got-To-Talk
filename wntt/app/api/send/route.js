@@ -1,10 +1,10 @@
 import { EmailTemplate } from "../../components/emailTemplate";
 import { Resend } from 'resend';
 
-const resend = new Resend('re_bqGKF3Nk_Pt6em2jZ5w9XtFAbcPf3Xns5');
-
 export async function POST(req) {
-{/*Get Form Data from Request*/}
+/*Get Form Data from Request*/
+const resend = new Resend(process.env.RESEND_API_KEY);
+
   const body = await req.json();
   const email = body
   try {
@@ -17,6 +17,7 @@ export async function POST(req) {
         email: body.email || "empty",
         message: body.message || "empty",
       }),
+      
     });
 
     if (error) {
@@ -28,3 +29,4 @@ export async function POST(req) {
     return Response.json({ error }, { status: 500 });
   }
 }
+
