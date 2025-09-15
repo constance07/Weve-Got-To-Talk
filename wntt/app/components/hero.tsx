@@ -28,7 +28,7 @@ export default function Hero(){
             </div>
         {/*Start Button*/}
         <div className= "startButton">
-            <a href ='/(1)cards'><button className={be_Vietnam_Pro_Light.className}>Let's get started...</button></a> 
+            <a href ='cards'><button className={be_Vietnam_Pro_Light.className}>Let's get started...</button></a> 
         </div>    
         </div>
             

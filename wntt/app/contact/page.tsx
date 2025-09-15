@@ -2,7 +2,7 @@ import Image from "next/image";
 {/* Figure out how to import global css*/}
 {/*Imported Components*/}
 import Navigation from "@/app/components/navigation";
-import Email from "@/app/(3)contact/email";
+import Email from "@/app/contact/email";
 import Footer from "@/app/components/footer";
 import Hero from "../components/hero";
 import About from "../components/about";

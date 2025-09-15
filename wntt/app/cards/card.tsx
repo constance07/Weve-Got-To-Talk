@@ -1,6 +1,6 @@
 'use client';
 import '../globals.css';
-import '../(1)cards/local.css';
+import './local.css';
 {/* Fonts */}
 import { Be_Vietnam_Pro} from 'next/font/google';
 {/*VBold*/}const be_Vietnam_Pro = Be_Vietnam_Pro({subsets: ['latin'], weight: '800'})
@@ -64,9 +64,9 @@ export default function Card(){
                                     <button  id = "cardDay" type = 'button' onClick = {() => {setCurrentCard(card3)}} className={be_Vietnam_Pro_Light.className}>#2</button>
                                     <button id = "cardDay" type ='button' onClick = {() => {setCurrentCard(card2)}} className={be_Vietnam_Pro_Light.className}>#3</button>
                                     <button id = "cardDay" type ='button' onClick = {() => {setCurrentCard(card7)}} className={be_Vietnam_Pro_Light.className}>#4</button>
-                                    <button id = "cardDay" type ='button' onClick = {() => {setCurrentCard(card6)}} className={be_Vietnam_Pro_Light.className}>#5</button>
-                                    <button id = "cardDay" type ='button' onClick = {() => {setCurrentCard(card4)}} className={be_Vietnam_Pro_Light.className}>#6</button>
-                                    <button id = "cardDay" type ='button' onClick = {() => {setCurrentCard(card5)}} className={be_Vietnam_Pro_Light.className}>#7</button>
+                                    <button id = "cardDay" type ='button' onClick = {() => {setCurrentCard(card5)}} className={be_Vietnam_Pro_Light.className}>#5</button>
+                                    <button id = "cardDay" type ='button' onClick = {() => {setCurrentCard(card6)}} className={be_Vietnam_Pro_Light.className}>#6</button>
+                                    <button id = "cardDay" type ='button' onClick = {() => {setCurrentCard(card4)}} className={be_Vietnam_Pro_Light.className}>#7</button>
                                 </div>
                         </div>
                         

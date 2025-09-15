@@ -67,11 +67,10 @@ export default function Email(){
 
         
         try{
-            await fetch("/api/send", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(formData),
-        });
+            const response = await fetch('/api/send', {
+                method: 'POST',
+                body: JSON.stringify({...formData}),
+            });
         /*Email Sent !*/
             setFormData(initialFormData);
             toast.success("Email was sent sucessfully!");

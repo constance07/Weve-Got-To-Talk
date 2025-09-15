@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/emailTemplate.js", "app/(4)contact/email.js", "app/(4)contact/contactSubmittal/page.js", "app/(1)cards/card.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/emailTemplate.js", "app/(4)contact/email.js", "app/(4)contact/contactSubmittal/page.js", "app/cards/card.js"],
   "exclude": ["node_modules"]
 }

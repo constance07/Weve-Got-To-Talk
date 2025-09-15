@@ -1,6 +1,6 @@
 'use client';
 import '../globals.css'
-import '../(2)about/local.css';
+import './local.css';
 {/* Fonts */}
 import { Be_Vietnam_Pro} from 'next/font/google';
 {/*VBold*/}const be_Vietnam_Pro = Be_Vietnam_Pro({subsets: ['latin'], weight: '800'})
@@ -35,7 +35,7 @@ export default function Disc(){
                     <div id = "allWords" className ={be_Vietnam_Pro_Light.className}>
                         <h1 id = "introWord">Hey :)</h1> My name is Serenity Buckner and I’m the creator of <div id = "logoInText" className ={be_Vietnam_Pro.className}>WE'VE GOT TO</div>
                         <div id = "logoInText" className ={be_Vietnam_Pro_Light.className}> TALK. </div>
-                         First off, I want to give a huge thank you to those who have played game and being a part of such a meaningful experience. 
+                         First off, I want to give a huge thank you to those who have played my game for being a part of such a meaningful experience. 
                         It takes genuine courage to learn who you are beyond the beliefs and values you've been taught or conditioned to inherit, albeit by others, or maybe even yourself. 
                         <br/>
                         <br/>
