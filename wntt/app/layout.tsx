@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "We've Got To Talk",
-  description: "",
+  description: "A 21 day self-growth card game empowering people to love themselves beyond external labels and obligation.",
 };
 
 export default function RootLayout({
