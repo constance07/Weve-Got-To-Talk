@@ -1,7 +1,7 @@
 import { EmailTemplate } from "../../components/emailTemplate";
 import { Resend } from 'resend';
 
-export async function POST(req) {
+export async function POST(req: any) {
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 

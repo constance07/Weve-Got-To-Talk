@@ -1,5 +1,9 @@
-
-export const EmailTemplate = ({name, email, message}) => {
+interface emailVariables{
+    name: string;
+    email: string;
+    message: string;
+}
+export const EmailTemplate = ({name, email, message}: emailVariables) => {
     return(
         <div>
             <p>
