@@ -71,12 +71,12 @@ export default function Email(){
                 method: 'POST',
                 body: JSON.stringify({...formData}),
             });
-        /*Email Sent !*/
+        /*Email Sent(OLD) !*/
             setFormData(initialFormData);
-            toast.success("Email was sent sucessfully!");
+            toast.error("This form is no longer active.");
         } catch(error: any){
         /*Email Error !*/
-            toast.error('Oops, looks like something went wrong ', error);
+            toast.error('This form is no longer active.');
         } 
     };
     
@@ -92,7 +92,7 @@ export default function Email(){
                 {/*Sub-Title*/}
                 <div className ='contactSubTitle'>
                     <div className={be_Vietnam_Pro_VLight.className}>
-                        Ask me anything, or just say hi... 
+                        (*This form is no longer active.<br></br>Contact me at Serenc0107@gmail.com)
                     </div>
                 </div>
 
